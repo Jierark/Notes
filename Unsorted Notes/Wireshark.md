@@ -1,0 +1,2 @@
+Wireshark is an open source packet analyzer, capable of sniffing and intercepting live traffic. It is a useful tool for getting deeper insight into different protocols, troubleshooting network issues, and detecting anomalous security activity. This section should serve to highlight some tips and tricks of Wireshark to make packet analysis easier.
+## 
