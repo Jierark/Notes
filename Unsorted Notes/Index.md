@@ -1,6 +1,8 @@
 Useful Terms, Tools, and the Likes
 
 # MAC Address
+A physical address tied to network interfaces on a device. Can be used to uniquely distinguish devices on a network, or to distinguish between different network interfaces.
+
 # IP Address
 An address assigned to devices on a network to route packets to the correct destinations. There are two forms of IP addresses in use:
 - IPv4 uses 32 bits, separated into 4 bytes
@@ -37,5 +39,7 @@ Transport Layer Security adds a level of security by ensuring that a third party
 Protocol to access remote systems, while ensuring security of the connection. Most commonly seen as OpenSSH, an open-source implementation by OpenBSD developers. Replaces the insecure telnet and listens on TCP port 22.
 # VPN
 Virtual Private Network establishes a "secure channel" between two networks, such that a user on one network can operate as if they were operating on the other network. Commonly used for remote workers to access company resources, to "change" geographical locations or to prevent ISPs from seeing traffic.
+# tcpdump
+Command line tool that captures network traffic. Accompanied by libpcap library. Able to also read any saved .pcap files, and filter packets accordingly. Compared to Wireshark, it is harder to use, but faster to operate.
 # [[Wireshark]] 
 [[Networking Fundamentals]] 

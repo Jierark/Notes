@@ -1,0 +1,31 @@
+#TODO: insert introductory text here, add a ton of pictures
+# Various Valves and Parts
+- Check Valve - only allows water to flow in one direction. Important in cases where water should not be flowing backwards.
+	- Reduced Pressure Zone (RPZ) / Backflow Preventer - a specific check valve on main water line to prevent contamination of domestic water supply
+- Globe Valve - controls pressure, regulating the flow of steam or water
+- Stop valve - used to open and close valves. Typically ball valves are used for this.
+	- Slow-opening valves - larger handles which takes 5 full revolutions to open and close
+	- Water column line will typically see a lever (ball valve) to drain it.
+- Automatic nonreturn valve - check valve for main steam line
+- Siphon/"pig tail" - typically seen on gauges, these are designed to protect the gauge from high temperatures (the loop doesn't affect the readings)
+- Dry pipe - perforated pipe which separates water and steam #TODO: dry steam = ??
+- Try cock - secondary water reading value
+- Water column - primary water level reading
+- Pressure/Vaporstat Control - used to control the limit of operating range of the steam or hot water boiler, respectively. Turns off the heating element when the upper range is reached.
+- High limit control - maintains the maximum limit for the boiler, and will shut down the boiler if triggered. This acts as a backup to the pressure control.
+- Superheater - heats steam to 500 degrees F
+- Economizer - preheats feedwater that enters the boiler, reducing the amount of energy required to convert the water to steam or hot water.
+- Closed Feedwater Heater - same role as economizer, located between boiler and feedwater pump
+- Flash tank *(return tank?)* - recovers low pressure steam, which can be refed into the boiler
+- Feedwater regulator - maintains constant water level
+- Lead sulfide cell (photocell) - used as flame failure control due to its sensitivity to infrared light
+- Solenoid Valve - direct-acting valve in gas system, acts as an automatic gas shutoff valve
+# Safety Valve
+- This is the ***MOST IMPORTANT*** part in the boiler. This is there to prevent many, many accidents from ever happening. The safety valve prevents the boiler from exceeding its Maximum Allowable Working Pressure (MAWP).
+- Spring-load type valves should close automatically while at Normal Working Pressure. Manual testing is possible at 70% of popping pressure. There are two ways to test:
+	- Accumulation test - after closing the main steam valve,  increase pressure to 10% above MAWP.
+	- Hydrostatic test - after closing the main steam valve, feed water into the boiler until pressure reaches 1.5 times MAWP. This is also a useful test for any leaks or cracks
+- The range of the boiler pressure gauge must not be less than 1.5 to 2x the safety valve. That is, if the safety valve is rated at 200 psi, the pressure gauge should be able to record at least 300 psi.
+- Capacity should never exceed 6% above the MAWP. For example, if the MAWP is 150 psi, then the max accumulation test level should not exceed 159 psi.
+- Any boiler with more than 500 square feet of heating surface must have two or more safety valves. Additionally, a high pressure boiler  
+- 
