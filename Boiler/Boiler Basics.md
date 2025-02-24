@@ -12,8 +12,9 @@ Sectional boilers replace the use of tubes in favor of larger "sections" which c
 Other ways to define boilers are their use case or their operating pressure. **Heating boilers** produce hot water to heat up a residential or commercial area, whereas **Process boilers**, also known as power or industrial boilers, produce much more hot water for industrial purposes. **Low Pressure** boilers have a max working pressure of 15 psi, operating pressure of 160 psi, and operate below 250 degrees Fahrenheit, while a **High Pressure** boiler can withstand conditions above those listed.
 
 ## Acquiring a boiler's license
-Boiler licenses depend on the specifications of the boiler. Boilers between 6 and 100 horsepower and operating over 15 psi requires a high-pressure special license, also known as the ***white seal***. In order to be eligible for this license, the applicant must have a minimum of 90 days experience with a boiler between 6 and 100 horsepower. This license is typical for dry cleaning store owners, or other equipment that requires high volumes of steam such as autoclave Note that this only applies to New Jersey; other states may classify their licenses differently.
+Boiler licenses depend on the specifications of the boiler. Boilers between 6 and 100 horsepower and operating over 15 psi requires a high-pressure special license, also known as the ***white seal***. In order to be eligible for this license, the applicant must have a minimum of 90 days experience with a boiler between 6 and 100 horsepower. This license is typical for dry cleaning store owners, or other equipment that requires high volumes of steam such as autoclave Note that this only applies to New Jersey; other states may classify their licenses differently. 
 
+There is a 30 day wait period after failing the boiler exam to retake it.
 # Boiler System
 A steam boiler consists of 4 components:
 - Feedwater system

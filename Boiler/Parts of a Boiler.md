@@ -21,6 +21,9 @@
 - Feedwater regulator - maintains constant water level
 - Lead sulfide cell (photocell) - used as flame failure control due to its sensitivity to infrared light
 - Solenoid Valve - direct-acting valve in gas system, acts as an automatic gas shutoff valve
+- Aqua stat - controls the starting and stopping of burner by measuring temperature of water
+- Air control removes air from a hot water boiler system.
+- Draft gauge = manometer, read in inches of water. Measures the difference of pressure in gas systems.
 # Safety Valve
 - This is the ***MOST IMPORTANT*** part in the boiler. This is there to prevent many, many accidents from ever happening. The safety valve prevents the boiler from exceeding its Maximum Allowable Working Pressure (MAWP).
 - Spring-load type valves should close automatically while at Normal Working Pressure. Manual testing is possible at 70% of popping pressure. There are two ways to test:
@@ -34,17 +37,19 @@
 - Superheater safety valve must be opened before the boiler SV opens
 - **Chattering** - the process of opening and closing SV rapidly.
 - **Nameplate** - contains Manufacturer Name, Model and Serial number, capacity size, set point and blowback, ASME code and National Board designation
+- Safety valves are sealed to prevent tampering with pressure and capacity
+- Maximum size of safety valve for a low pressure boiler is 4 1/2 inches.
 # Water Column
 The water column is the primary water level indicator. It should always be the first thing an operator checks. 
 
 - In normal operation, the water level should be at Normal Operating Water Level (NOWL), rising and falling slowly. 
 - Alternatively, the three try cocks on the side can be used to read the water level using the following method:
 	- Under normal operation, each try cock corresponds to a different "level" within the boiler. Given that steam tends to rise, one can open a try cock and see if any water comes out. The topmost valve should only release steam, the middle valve should release a mixture of water and steam, and the bottom valve should release hot water.
-
 - The minimum size of the blowdown pipe (which is used to drain the water column) is 1 inch.
 - Between the boiler and the water column, an outside screw and a yoke valve.
 - It's important to note that the actual water level inside the boiler is always slightly higher than the water column level.
 - **Important Note: do not add water or run the boiler if the water column cannot be read and the try cocks cannot be opened. It's imperative that the amount of water inside the boiler is known at all times of operation, and failure to adhere to this note can lead to disaster**
+- The minimum size of the drain required on the water column is 3/4 inches.
 
 # Low Water Cut Off (LWCO)
 This is the **second most** important part of the boiler. The low water cutoff keeps track of the water level and will shut the boiler off if there is too little water inside.
@@ -56,3 +61,10 @@ This is the **second most** important part of the boiler. The low water cutoff k
 	- Evaporation test - Close the feedwater line and run the boiler. The boiler will use the remaining water inside and run until LWCO is triggered.
 - LWCO should be cleaned and inspected at least once a year to ensure it is constantly in operating condition.
 - An electric boiler which does not use gas is the only boiler which does not require an LWCO.
+
+# Miscellaneous
+- One disadvantage of electric boilers is that they require a lot of energy to run.
+- Operating voltage for an electrode type boiler can be as high as 16,000 volts.
+	- Additionally, the amount of steam that it produces depends on the amount of water in the basket.
+- Immersion electric boiler can have a capacity of up to 2700 hp.
+- Control of the immersion heater boiler is done by turning on and off the heating elements.

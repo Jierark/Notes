@@ -36,3 +36,5 @@ The three components to support combustion are fuel, heat, and oxygen (fire tria
 - Clean water maintenance inside the boiler is important #clarify . Natural water, whether from tap or city line, contains minerals and other pollutants  which needs to be treated to prevent formation of scale (see [[Operation and Maintenance of Boilers#Boiler Blowdown]] for more details). Additionally, there are chemicals which can be added to treat the feed-water.
 - First law of thermodynamics states that heat and work are mutually convertible #expand 
 - Second law of thermodynamics states that transferring heat from a cold substance to a hot substance (such as in refrigeration) will require external work or energy.
+- Viscosity - internal resistance of a fluid to flow. High viscosity means a fluid does not flow as well.
+	- In boiler context, #6 oil has high Viscosity, which can be lowered by heating up the oil to 150 degree Fahrenheit
