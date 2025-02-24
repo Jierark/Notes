@@ -1,0 +1,101 @@
+Things I need to move into correct places
+
+- Output divided by the input formula is used to determine the efficiency of the boiler based on heat absorption #clarify
+- Aqua stat - controls the starting and stopping of burner by measuring temperature of water
+- Viscosity - internal resistance of a fluid to flow. High viscosity means a fluid does not flow as well.
+	- In boiler context, #6 oil has high Viscosity, which can be lowered by heating up the oil to 150 degree Fahrenheit
+- Each boiler that is piped together and share the same common header must have a main steam stop valve on each boiler.
+- Air control removes air from a hot water boiler system.
+- Hydrostatic test of a boiler needs exceeds the maximum allowable working pressure on each safety valve, if left attached to the oiler, should have its valve disc held to its seat by means of testing clamp or gag
+- Safety valves are sealed to prevent tampering with pressure and capacity
+- Pressure control has cut in pressure and differential pressure scales
+- Minimum size bottom blowdown line on a miniature boiler - 1/2 inch
+- Minimum size drain required on water column - 3/4 inch
+- Furnace explosion can be caused by accumulation of unburned fuel, oxygen, and an ignition source (basically same start as combustion reaction, but it's unintended)
+- Low water cut out should be tested weekly
+- High pressure safety valve cannot be used on the same boiler for low pressure
+- For a fuel to burn, it needs to heat to its ignition temperature
+- Sodium sulfite is typically used as an oxygen scavenger (oxygen causes corrosion) #expand 
+- Some heating systems use a thermostat to control the circulation pump
+- Draft gauge = manometer, read in inches of water
+- A sign of a water logged expansion tank - adding water to a hot water heating system causes the pressure gauge to rise quickly
+- In a hot water boiler system, pressure reducing valve is installed to reduce incoming city water pressure to hot water boiler operating pressure
+- 30 day wait period after failing the boiler exam to retake it.
+- Maximum size of safety valve for a low pressure boiler is 4 1/2 inches.
+- Flue gas analyzer measures percentages of carbon monoxide, carbon dioxide, and oxygen
+- Boilers that are out of service for a long time are recommended a dry layup to prevent freezing and corrosion
+- Slow opening valve used as a bottom blow down valve requires 5 complete turns to open and close
+- Water hammer is caused by carryover #clarify 
+- During a hydrostatic test on a boiler, the water temperature should be 70 degrees F
+- After repair work is done on the boiler, a hydrostatic test is used to check for leaks
+- Safety valve for low pressure boiler should be tested monthly
+- Breeching #clarify is located between the boiler and chimney
+- Baffles - used to direct the flow of gases throughout the boiler
+	- A broken baffle will cause a sudden rise in chimney temperature, with no increase in load.
+- On an automatic fired boiler, 4 complete air charges are required before pilot is lit #clarify 
+- If the boiler operates above 40 horsepower, it should be checked **every 2 hours**
+- 1 BTU (British Thermal Unit) is the amount of heat required to raise the temperature of 1 pound of water by 1 degree F
+- Flash point refers to the lowest temperature at which a liquid forms a vapor over its surface which "flashes", or briefly ignites, when exposed to a flame. It's an important property to determine the combustibility of a liquid. #expand 
+- Fire point refers to the temperature when a liquid will continuously burn when exposed to a flame for at least 5 seconds.
+- To test the flame scanner, put your hand over the scanner #clarify 
+- An oiler coolers is commonly used with a Steam turbine when operating in conjunction with a turbo-generator #clarify 
+- On a boiler, the economizer can be used to add heat to feedwater, reducing the amount of work that the boiler needs to do.
+- Soot blowers are normally used with water-tube boilers.
+- Carbon dioxide in a condensate return system causes channeling
+- 1 pound of steam per hour is equivalent to 1,000 BTU/hour
+- A Steam trap allows condensate to pass through, but prevents steam from passing through #expand 
+- An increase in the temperature of combustion gases at the boiler outlet is usually due to dirty heating surfaces.
+- Boilers in battery equipped with Manhole openings must have two main steam stop valves and a free-blowing drain between them
+- In order to be sure the gauge glass is indicating an accurate water level reading, the stationary engineer should blow down the water column.
+- A continuous blowdown line is located in the steam and water drum well below the NOWL.
+- Chimney temperature above 250 degree F indicates poor boiler efficiency
+- Higher pressure will raise the boiling point of water.
+- If a lather is not obtained when performing a soap hardness test, the water sample is hard.
+- Combustion efficiency can be increased if the air is preheated
+- A steam turbine's overdraft trip should be tested before putting it online. The trip should trigger if the turbine's RPM exceeds 10% of its normal operation speed.
+- Chemically treating feedwater is done to convert scale forming salts into a non-adhering sludge, which can be removed during blowdown.
+- Water in a deareator feedwater heater is prevented from entering the steam line by a loop seal or internal overflow #clarify 
+- The steam line going to the soot blowers is connected to the main steam drum. Additionally, the soot blower lines should be drained before using them.
+- A globe valve installed in the feedwater line between the feedwater pump and boiler has pressure from the feedwater pump under the valve disc.
+- Superheater drain is used to establish steam flow.
+- 1 Therm (thm) is equivalent to 100,000 BTU, which is the energy content of about 100 cubic feet of natural gas at standard temperature and pressure.
+- The safety valve setting on the steam and water drum should be higher than the superheater safety valve.
+- No.6 fuel oil has a BTU content of about 18,750 BTU/lb.
+- A proportioning pump should be used to add chemicals to a boiler.
+- Feedwater stop valve should be between the boiler and check valve
+- Steam space of a boiler must be large enough to separate the water from the steam.
+- A steam boiler should be compact in design to reduce building costs
+- Power boiler require 2 blowdown valves #clarify power boiler = ?
+- A disadvantage of a firebox boiler is that cleaning and inspection is difficult #clarify 
+- Wetback scotchback boiler is primarily designed for Marine service (commonly seen on ships) #clarify 
+- Packaged boiler is built ready for installation.
+- Hot water supply boilers are considered heating boilers if the operating temperature exceeds 200 degrees F
+- In a firetube boiler, increasing the number of tube passes augments the heat transfer capability (more surface area to heat up water)
+- High pressure water tubes can be of various straight for bent configurations #clarify 
+- Bent tube boiler design allows the tubes to be attached radially on the outside of the drum #expand 
+- Since the pressure in a packaged watertube boiler is often positive, to prevent flue gas from leaking, a steal casing is used to form a seal on the furnace.
+- One problem with a D type watertube packaged boiler is excessive vibration.
+- Some advantages of low pressure water tube and tubular type boilers are the very short warm up period required, bent or coil tube design avoids thermal stress, and rapid response to fluctuating loads.
+- One disadvantage of electric boilers is that they require a lot of energy to run.
+- Operating voltage for an electrode type boiler can be as high as 16,000 volts.
+	- Additionally, the amount of steam that it produces depends on the amount of water in the basket.
+- Immersion electric boiler can have a capacity of up to 2700 hp.
+- Control of the immersion heater boiler is done by turning on and off the heating elements.
+- The reason for the use of steam is to allow the maximum quantity of heat to be put into well with the minimum quantity of injected fluid.
+- Combustion air is fed at three elevations of the furnace: primary, secondary, tertiary
+- Vibration aids combustion by leveling out the be for burning biomass #clarify 
+- Convectors use metal fins to increase heat transfer
+- Unit heater is a unit forced through a heating coil, where the fan and coil are within the same unit #clarify 
+- Radiator trap only allows water to leave a radiator
+- Exhauster on an air separation tank consists of a series of nozzles through which water is forced by a pump
+- Possible sources of heat - convector, unit ventilator, and radiator
+- In a gravity return system, the boiler should be placed well below the lowest radiator
+- Hartford loop is a pressure balancing device that stops the boiler pressure from forcing water in the boiler into the return line.
+- Steam in a two pipe return system is supplied at a maximum pressure of 15 psi.
+- A vacuum pump maintains a vacuum 1.01 to 1.45 psi higher in the condensate return system
+- Insufficient steam supply to the heating units can be due to improper pitch, defective radiator valve, and clogging of connections.
+- Bi-metal thermometer consists of two dissimilar wires connected together
+- Superheated steam avoids condensation loss #expand 
+- A factor that has a large impact on the outcome of a workers' post-accident recovery is his attitude before and after the accident
+- During worker rehabilitation the supervisor should assist the worker seeking and obtaining support services
+- 

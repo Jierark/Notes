@@ -13,7 +13,7 @@ On average, there are 2,000 cases of boiler accidents per year. To avoid these, 
 10. Record fuel consumption regularly
 11. Maintain optimum feedwater temperature.
 12. Record make-up water consumption regularly.
-13. Monitor and record stack temperature. (temp. Increase in stack losing heat) #TODO clarify
+13. Monitor and record stack temperature. (temp. Increase in stack losing heat) #clarify 
 14. Maintain control of the boiler at all times. Observe operation of the boiler and auxiliary equipment.
 15. Maintain boiler room log. Record all appropriate data and document any unusual conditions.
 
@@ -55,7 +55,7 @@ System baselining establishes a record of the system's normal operating characte
 6. Controls - safety and operating controls should be tested during baselining. Relevant information to record includes control type and manufacturer model number
 7. Piping system - draw a system piping diagram, noting all pipe sizes, valves, controls, and all other components.
 8. Measuring Efficiency and Emissions
-	- Combustion Efficiency #TODO clarify section
+	- Combustion Efficiency #clarify 
 		- Flue Gas Analysis - allows a  technician to determine the boiler efficiency
 		- Combustion reactions, in a perfect reaction, will only produce steam (H2O), nitrogen gas (N2), and carbon dioxide (CO2)
 		- Efficiently operating steam generators have a normal stack temperature range between 250-350 degrees F
@@ -75,7 +75,28 @@ An area is designated as an "attainment" area if it does not exceed the limits. 
 Steam boiler water treatment chemicals are best applied by use of a ***demand-based automatic system***, adding chemical compounds based on make-up water quantity and current water conditions.
 
 # Water Chemistry
-New boilers and piping systems will have a layer of oil used in the manufacturing process, often applied as a surface corrosion preventive. It is important to remove this oil completely before operating. Failure to do so can result in priming and foaming in steam boilers, as well as water carryover into the steam system #TODO (what is water carryover). In hot water systems, the oil prevents the desired corrosion inhibitor from fully protecting the metal surfaces and promotes biological growth.
+New boilers and piping systems will have a layer of oil used in the manufacturing process, often applied as a surface corrosion preventive. It is important to remove this oil completely before operating. Failure to do so can result in priming and foaming in steam boilers, as well as water carryover into the steam system #clarify  (what is water carryover). In hot water systems, the oil prevents the desired corrosion inhibitor from fully protecting the metal surfaces and promotes biological growth.
 
 ## System Cleaning
 Cleaning hot water systems is accomplished by adding and circulating some chemical cleaning compound, typically a blend of sodium hydroxide and tri-sodium phosphate. Sodium carbonate can also be used. Regardless of solution, it should be introduced as per manufacturer instructions, circulated and cleaned. Note that it is imperative that the operator shuts off any valves that could leak this solution into undesirable locations, such as a city water main.
+
+# Boiler Blowdown
+Blowdown involves removing water from within the boiler to clean the insides. It is a vital step in ensuring the longevity of a boiler.
+
+- Feedwater from city lines and other sources typically contain "impurities", such as sediments and minerals. These settle at the bottom of the boiler as the water that carries them is heated and converted to steam, and builds up, leading to corrosion and other problems. Performing bottom blowdown #clarify on the boiler removes the sludge and sediments from the boiler.
+- Hard scale/boiler scale, which are insoluble salts that build up on boiler tubes and walls, are best removed with air or water turbines. These result from the hardness of the water containing calcium and magnesium ions.
+- Blowdown should be performed at least once a day. If the boiler is used during multiple shifts in a day, then each shift must be responsible for performing blowdown either at the start or at the end.
+- Blowdown is performed when the boiler has cooled down to a low pressure. The top blowdown should be performed 3 times for 10-15 seconds each, or until clean water comes up #clarify, then the bottom blowdown is performed for 20-30 seconds.
+- The bottom blowdown tube has a minimum of 1 1/2" and a maximum size of 2 1/2". If the boiler has under 100 square feet of heating surface, the line size can be smaller.
+- Any boiler that can operate at higher than 100 psi must have 2 blowdown valves, with a quick-closing valve closer to the boiler, and a screw-type valve further away.
+- Surface blowdown is located NOWL #clarify 
+- The order of the blowdown pathway is boiler --> mud drum --> blowdown tank --> sewer
+- Blowdown can also be used to control the amount of chemical in the boiler, which is useful if the interior requires some chemicals for a deeper cleaning.
+- If there is too much water in the boiler (to the point where water is coming out of the top try cock, or it is way too high in the water column), blowdown can be used to lower the amount of water inside.
+
+# ASME (American Society of Mechanical Engineers) Code
+- Every boiler and boiler fittings in the state of New Jersey must meet ASME standards.
+- We are testing for White Special Boiler License
+- Operating a boiler without a license results in a minimum fine of $500 per day, with a maximum of $5000 per day.
+- The maximum capacity allowed is 100 horsepower, and a minimum of 15 psig. #clarify 
+- In New Jersey, boiler licenses are issued by the Bureau of Boiler & Pressure Vessel Compliances
