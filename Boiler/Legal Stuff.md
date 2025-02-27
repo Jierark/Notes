@@ -8,9 +8,9 @@ An area is designated as an "attainment" area if it does not exceed the limits. 
 
 # ASME (American Society of Mechanical Engineers) Code
 - Every boiler and boiler fittings in the state of New Jersey must meet ASME standards.
-- We are testing for White Special Boiler License
+- The specific name of the license is White Special Boiler License
 - Operating a boiler without a license results in a minimum fine of $500 per day, with a maximum of $5000 per day.
-- The maximum capacity allowed is 100 horsepower, and a minimum of 15 psig. #clarify 
+- The maximum capacity allowed is 100 horsepower, and a minimum of 15 psig (psig is whatever a gauge would output.)
 - In New Jersey, boiler licenses are issued by the Bureau of Boiler & Pressure Vessel Compliances
 
 # Miscellaneous

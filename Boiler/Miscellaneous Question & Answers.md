@@ -1,0 +1,45 @@
+I don't really know where to put these. These are derived from the knowledge pool for the boiler exam, but are a bit too specific to be put into a set of general notes.
+
+- Hot water supply boilers are considered heating boilers if the operating temperature exceeds 200 degrees F
+- Hydrostatic test of a boiler needs exceeds the maximum allowable working pressure on each safety valve, if left attached to the oiler, should have its valve disc held to its seat by means of testing clamp or gag #clarify 
+- Slow opening valve used as a bottom blow down valve requires 5 complete turns to open and close
+- If the boiler operates above 40 horsepower, it should be checked **every 2 hours**
+- Power boiler require 2 blowdown valves 
+- An oiler coolers is commonly used with a Steam turbine when operating in conjunction with a turbo-generator 
+- Soot blowers are normally used with water-tube boilers.
+- Carbon dioxide in a condensate return system causes channeling, which is when water flows along a specific path as opposed to being evenly distributed throughout the return path. This can cause water hammer and is inefficient for heat exchange.
+- An increase in the temperature of combustion gases at the boiler outlet is usually due to dirty heating surfaces.
+- Boilers in battery equipped with Manhole openings must have two main steam stop valves and a free-blowing drain between them
+- A continuous blowdown line is located in the steam and water drum well below the NOWL.
+- Higher pressure will raise the boiling point of water.
+- If a lather is not obtained when performing a soap hardness test, the water sample is hard.
+- A steam turbine's overdraft trip should be tested before putting it online. The trip should trigger if the turbine's RPM exceeds 10% of its normal operation speed.
+- Water in a deareator feedwater heater is prevented from entering the steam line by a loop seal or internal overflow 
+- The steam line going to the soot blowers is connected to the main steam drum. Additionally, the soot blower lines should be drained before using them.
+- A globe valve installed in the feedwater line between the feedwater pump and boiler has pressure from the feedwater pump under the valve disc.
+- The safety valve setting on the steam and water drum should be higher than the superheater safety valve.
+- No.6 fuel oil has a BTU content of about 18,750 BTU/lb.
+- Feedwater stop valve should be between the boiler and check valve
+- Steam space of a boiler must be large enough to separate the water from the steam.
+- A steam boiler should be compact in design to reduce building costs
+- A disadvantage of a firebox boiler is that cleaning and inspection is difficult (not sure what a firebox boiler is)  
+- Wetback scotchback boiler is primarily designed for Marine service (commonly seen on ships) 
+- High pressure water tubes can be of various straight for bent configurations 
+- Bent tube boiler design allows the tubes to be attached radially on the outside of the drum
+- Since the pressure in a packaged watertube boiler is often positive, to prevent flue gas from leaking, a steal casing is used to form a seal on the furnace.
+- One problem with a D type watertube packaged boiler is excessive vibration.
+- Some advantages of low pressure water tube and tubular type boilers are the very short warm up period required, bent or coil tube design avoids thermal stress, and rapid response to fluctuating loads.
+- The reason for the use of steam is to allow the maximum quantity of heat to be put into well with the minimum quantity of injected fluid.
+- Vibration aids combustion by leveling out the be for burning biomass
+- Convectors use metal fins to increase heat transfer
+- Unit heater is a unit forced through a heating coil, where the fan and coil are within the same unit 
+- Radiator trap only allows water to leave a radiator
+- Exhauster on an air separation tank consists of a series of nozzles through which water is forced by a pump
+- Possible sources of heat - convector, unit ventilator, and radiator
+- In a gravity return system, the boiler should be placed well below the lowest radiator
+- Hartford loop is a pressure balancing device that stops the boiler pressure from forcing water in the boiler into the return line.
+- Steam in a two pipe return system is supplied at a maximum pressure of 15 psi.
+- A vacuum pump maintains a vacuum 1.01 to 1.45 psi higher in the condensate return system
+- Insufficient steam supply to the heating units can be due to improper pitch, defective radiator valve, and clogging of connections.
+- Bi-metal thermometer consists of two dissimilar wires connected together
+- Superheated steam avoids condensation loss 
