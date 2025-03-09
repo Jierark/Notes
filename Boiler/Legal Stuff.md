@@ -16,3 +16,4 @@ An area is designated as an "attainment" area if it does not exceed the limits. 
 # Miscellaneous
 - A factor that has a large impact on the outcome of a workers' post-accident recovery is his attitude before and after the accident
 - During worker rehabilitation the supervisor should assist the worker seeking and obtaining support services
+- 
