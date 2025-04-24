@@ -32,6 +32,8 @@ Keeping the boiler in peak operating condition is vital for the long-term. Speci
 10.  Follow approved safety practices in and around the boiler room, and follow relevant OSHA procedures for locknut tag-out, confined spaces, and personal protective equipment. Working on electrical equipment carries the risk of arc flash hazards. Burns and chemical contact are some among the dangers of a boiler room.
 
 - A high pressure boiler operating at 40 horsepower should be checked every 2 hours.
+- A high Pressure steam boiler operating between 15-400 psi should have manual testing every 6 Months and pressure testing every year. If it operates above 400 psi, then it can be tested every 3 years.
+- A hot water boiler greater than 160 psi should be pressure tested annually.
 ## Baselining
 System baselining establishes a record of the system's normal operating characteristics. It's a good starting point to diagnose problems with the system. Operators and technicians should have this on hand when servicing the boiler.
 
@@ -82,7 +84,7 @@ Blowdown involves removing water from within the boiler to clean the insides. It
 - Hard scale/boiler scale, which are insoluble salts that build up on boiler tubes and walls, are best removed with air or water turbines. These result from the hardness of the water containing calcium and magnesium ions.
 - Blowdown should be performed at least once a day. If the boiler is used during multiple shifts in a day, then each shift must be responsible for performing blowdown either at the start or at the end.
 - Blowdown is performed when the boiler has cooled down to a low pressure. The top blowdown should be performed 3 times for 10-15 seconds each, or until clean water comes up, then the bottom blowdown is performed for 20-30 seconds.
-- The bottom blowdown tube has a minimum of 1 1/2" and a maximum size of 2 1/2". If the boiler has under 100 square feet of heating surface, the line size can be smaller.
+- The bottom blowdown tube has a minimum of 1 1/2 inches and a maximum size of 2 1/2 inches. If the boiler has under 100 square feet of heating surface, the line size can be smaller.
 - Any boiler that can operate at higher than 100 psi must have 2 blowdown valves, with a quick-closing valve closer to the boiler, and a screw-type valve further away.
 - Surface blowdown is located at NOWL 
 - The order of the blowdown pathway is **boiler --> mud drum --> blowdown tank --> sewer**
@@ -92,7 +94,7 @@ Blowdown involves removing water from within the boiler to clean the insides. It
 # Miscellaneous
 - Each boiler that is piped together and share the same common header must have a main steam stop valve on each boiler. In the case that one boiler experiences issues or failure, it can be isolated from the other and prevent possible contaminants from spreading.
 - Furnace explosion can be caused by accumulation of unburned fuel, oxygen, and an ignition source (basically same start as combustion reaction, but it's unintended)
-- A sign of a water logged expansion tank - adding water to a hot water heating system causes the pressure gauge to rise quickly
+- A sign of a water logged expansion tank - adding water to a hot water heating system causes the pressure gauge to rise quickly. The expansion tank should be able to absorb pressure surges since it gives water a place to expand.
 - Water hammer, the phenomenon where a high-pressure shockwave propagates through a piping system due to the sudden stopping or changing of motion of a fluid, is caused by carryover, which are contaminants that leave the boiler with steam. To clarify, carryover will build up deposits of insolvable sediments on the pipes, which will cause sudden slowdowns or abrupt stops of water that flows through that pipe, leading to water hammer.
 - Output divided by the input formula is used to determine the efficiency of the boiler based on heat absorption. To clarify, this formula looks at the amount of heat that exits the boiler, compared to its input. A high ratio means that the boiler isn't utilizing the input heat well and usually indicates some kind of problem. A low value indicates efficient or normal operation.
 - On an automatic fired boiler, 4 complete air charges are required before pilot is lit. This is in relation to purging, where leftover gas and pollutants are cleared from the burner before the pilot light is started.

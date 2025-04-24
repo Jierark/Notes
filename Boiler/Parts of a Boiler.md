@@ -41,15 +41,14 @@ It's also important to recognize different parts of a boiler and their function.
 ![[safetyvalve.jpg]]
 - This is the ***MOST IMPORTANT*** part in the boiler. This is there to prevent many, many accidents from ever happening. The safety valve prevents the boiler from exceeding its Maximum Allowable Working Pressure (MAWP).
 - Spring-load type valves should close automatically while at Normal Working Pressure. Manual testing is possible at 70% of popping pressure. There are two ways to test:
-	- Accumulation test - after closing the main steam valve,  increase pressure to 10% above MAWP.
+	- Accumulation test - after closing the main steam valve, increase pressure to 10% above MAWP.
 	- Hydrostatic test - after closing the main steam valve, feed water into the boiler until pressure reaches 1.5 times MAWP. This is also a useful test for any leaks or cracks
 		- During a hydrostatic test on a boiler, the water temperature should be 70 degrees F
 	- These valves should open when a specific capacity is hit, relieving pressure until it lowers to a safe operating level.
 - The range of the boiler pressure gauge **must be between 1.5 to 2x the safety valve**. That is, if the safety valve is rated at 200 psi, the pressure gauge should be able to record at least 300 psi and a maximum of 400 psi.
-- Capacity should never exceed **6%** above the MAWP. For example, if the MAWP is 150 psi, then the max accumulation test level should not exceed 159 psi.
+- Capacity should never exceed **6%** above the MAWP (the safety valve should have kicked in and started to relieve pressure). For example, if the MAWP is 150 psi, then the max accumulation test level should not exceed 159 psi.
 - Any boiler with more than 500 square feet of heating surface must have two or more safety valves. Additionally, a high pressure boiler requires a safety valve of at least 3/5 inches.
 - Setting and adjusting of an SV must be done by maintenance personnel, but repairs of an SV must be done by an authorized representative of the manufacturer.
-- High Pressure steam boiler, 15-400 psi perform manual every 6 Months and annually pressure test. 400 psi more every 3 years, hot water boiler greater than 160 psi pressure test annually.  #confusing (not sure what this means)
 - Superheater safety valve must be opened before the boiler SV opens
 - **Chattering** - the process of opening and closing SV rapidly.
 - **Nameplate** - contains Manufacturer Name, Model and Serial number, capacity size, set point and blowback, ASME code and National Board designation
@@ -74,7 +73,7 @@ The water column is the primary water level indicator. It should always be the f
 This is the **second most** important part of the boiler. The low water cutoff keeps track of the water level and will shut the boiler off if there is too little water inside.
 
 - In the event of low water, the first step is to secure the fire (stop burning of fuel) and let the boiler cool down. **Do not add cold water, as the rapid change in temperature can cause the boiler to collapse on itself** (See Can crush experiment)
-- There are three types of LWCO devices: Probe, Float, and Magnetic #TODO add photos
+- There are three types of LWCO devices: Probe, Float, and Magnetic
 - LWCO should be tested weekly using quick and slow open drain and evaporation tests
 	- Quick and Slow (Q&S) Open Drain - open the blowdown valve to drain water from the boiler and test that the boiler will respond.
 	- Evaporation test - Close the feedwater line and run the boiler. The boiler will use the remaining water inside and run until LWCO is triggered.

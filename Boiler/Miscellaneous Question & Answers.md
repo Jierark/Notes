@@ -5,9 +5,9 @@ I don't really know where to put these. These are derived from the knowledge poo
 - Slow opening valve used as a bottom blow down valve requires 5 complete turns to open and close
 - If the boiler operates above 40 horsepower, it should be checked **every 2 hours**
 - Power boiler require 2 blowdown valves 
-- An oiler coolers is commonly used with a Steam turbine when operating in conjunction with a turbo-generator 
+- An oiler cooler is commonly used with a Steam turbine when operating in conjunction with a turbo-generator 
 - Soot blowers are normally used with water-tube boilers.
-- Carbon dioxide in a condensate return system causes channeling, which is when water flows along a specific path as opposed to being evenly distributed throughout the return path. This can cause water hammer and is inefficient for heat exchange.
+- Carbon dioxide in a condensate return system causes channeling, which is when water flows along a specific path (or channel) as opposed to being evenly distributed throughout the return path. This can cause water hammer and is inefficient for heat exchange.
 - An increase in the temperature of combustion gases at the boiler outlet is usually due to dirty heating surfaces.
 - Boilers in battery equipped with Manhole openings must have two main steam stop valves and a free-blowing drain between them
 - A continuous blowdown line is located in the steam and water drum well below the NOWL.
