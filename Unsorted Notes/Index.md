@@ -43,3 +43,22 @@ Virtual Private Network establishes a "secure channel" between two networks, suc
 Command line tool that captures network traffic. Accompanied by libpcap library. Able to also read any saved .pcap files, and filter packets accordingly. Compared to Wireshark, it is harder to use, but faster to operate.
 # [[Wireshark]] 
 [[Networking Fundamentals]] 
+
+# RSA
+Public key encryption algorithm, relying on the difficulty of factoring large numbers to stay secure
+Procedure:
+- Choose two prime numbers p, q and calculate their product n = p x q
+- Calculate ϕ(n) = n - p - q + 1, and choose e such that e is relatively prime to ϕ(n) (meaning they share no common factors except 1). Choose d such that e x d = 1 mod ϕ(n)
+	- d is considered the multiplicative inverse of e, mod ϕ(n)
+- The public key is (n,e), and the private key is (n,d)
+- To send a message m, compute c = m^e mod n
+- To decrypt a ciphertext c, compute m = c^d mod n
+- There's a giant proof for why it works that I can't be bothered to recall but it's very cool to read.
+
+# Diffie-Hellman Key Exchange
+An asymmetric key exchange where both parties then agree on a shared secret key.
+Procedure:
+- A & B agree on a prime number p and generator g where 0 < g < p.
+- A & B choose a private integer a & b that is kept secret.
+- A sends g^a mod p, while B sends g^b mod p (Key exchange)
+- A receives the message from B and computes (g^b)^a mod p, and B similarly computes (g^a)^b mod p, which are equal.
