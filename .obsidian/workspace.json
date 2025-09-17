@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "05210f9302fd2e99",
+        "id": "0a1f6b82e86e4018",
         "type": "tabs",
         "children": [
           {
-            "id": "476405080f3d717c",
+            "id": "3ad59723276669b2",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -90,6 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Unsorted Notes/Prompt Hacking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +100,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Prompt Hacking"
             }
           },
           {
@@ -145,10 +146,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -157,16 +160,40 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "476405080f3d717c",
+  "active": "3ad59723276669b2",
   "lastOpenFiles": [
+    "MIT Class Notes/18.0851/Lecture 3.md",
+    "MIT Class Notes/18.0851/Lecture 2.md",
+    "MIT Class Notes/18.0851/Lecture 1.md",
+    "MIT Class Notes/18.0851/All Lectures.md",
+    "MIT Class Notes/6.5820/All Lectures.md",
+    "MIT Class Notes/6.5820/Lecture 3.md",
+    "MIT Class Notes/6.5820/Lecture 2.md",
+    "MIT Class Notes/6.5820/Lecture 1.md",
+    "MIT Class Notes/6.3950/All Lectures.md",
+    "MIT Class Notes/6.5820/Untitled.base",
+    "Untitled.md",
+    "MIT Class Notes/6.5820/Untitled.canvas",
+    "Jailbreaking & Prompt Engineering/List of Template Ideas.md",
     "Unsorted Notes/Index.md",
     "Unsorted Notes/Bash Scripting.md",
-    "Boiler/Parts of a Boiler.md",
+    "Jailbreaking & Prompt Engineering/Prompt Hacking.md",
+    "Jailbreaking & Prompt Engineering/Hackapromptle Notes.md",
     "Boiler/Operation and Maintenance of Boilers.md",
     "Boiler/Miscellaneous Question & Answers.md",
-    "Boiler/Legal Stuff.md",
-    "Boiler/Science-y Stuff.md",
+    "Boiler/Parts of a Boiler.md",
     "Boiler/Boiler Basics.md",
+    "Boiler/How to Use This Study Guide.md",
+    "MIT Class Notes/6.5820",
+    "MIT Class Notes/18.0851",
+    "MIT Class Notes/6.3950",
+    "MIT Class Notes",
+    "Jailbreaking & Prompt Engineering/Zilliax.md",
+    "Jailbreaking & Prompt Engineering",
+    "Unsorted Notes/SQL.md",
+    "Unsorted Notes/Useful Tools.md",
+    "Unsorted Notes/Windows Specific Tools and Tricks.md",
+    "Unsorted Notes/Networking Fundamentals.md",
     "Unsorted Notes/MacOS Useful Tools.md",
     "Boiler/img/stopvalve(ball).jpg",
     "Boiler/img/trycock.png",
@@ -175,12 +202,6 @@
     "Boiler/img/globevalve.jpg",
     "Boiler/img/checkvalve.jpg",
     "Boiler/img",
-    "Boiler/How to Use This Study Guide.md",
-    "Boiler",
-    "Unsorted Notes/Wireshark.md",
-    "Unsorted Notes/Windows Specific Tools and Tricks.md",
-    "Unsorted Notes/Networking Fundamentals.md",
-    "Unsorted Notes/Reverse Engineering MIT.md",
-    "Untitled"
+    "Boiler"
   ]
 }
