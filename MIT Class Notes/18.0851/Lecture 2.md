@@ -21,7 +21,7 @@ Whoa, whoa, whoa. How did we get here? Where did these terms come from?
 # Linear Algebra Review
 Suppose I have this graph with 3 defined vectors $\vec{u},\vec{v},\vec{w}$.
 
-# INSERT DRAWING HERE
+#drawing
 
 Let's suppose I had an unknown vector $\vec{b}$ . Can I find $x_{1}, x_{2}, x_{3}$ such that $x_{1}\vec{u} + x_{2}\vec{v} + x_{3}\vec{w} = \vec{b}$?
 
@@ -129,8 +129,3 @@ Given a square matrix A, all of these statements are equivalent and true. If one
 - det(A) $\neq$ 0
 - 0 is not an eigenvalue of A.
 Some of these statements will be expanded on later.
-
-# Other useful definitions
-$\vec{u}\cdot \vec{v}$ - dot product of two vectors. Compute sum of pairwise multiplication of entries
-- The norm of a vector $||\vec{v}||$ is the dot product of a vector onto itself. Or you can just take a square root of sum of squares of components
-- Two vectors are orthogonal if their dot product is 0. If their norms are both 1, then they are considered "orthonormal"

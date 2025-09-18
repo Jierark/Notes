@@ -4,7 +4,7 @@ Is available on libgen btw (some mirrors won't have it)
 # A Special Matrix K
 Consider the following system. You have 3 masses, all connected by springs from floor to ceiling. 
 
-# INSERT DRAWING HERE
+#drawing 
 
 How does the system react if we move the masses around? Some of the springs will elongate, others will compress. Mathematically, we want to find the values $u_{1}, u_{2}, u_{3}$ from $f_1, f_2, f_3$, where $u_{i}$ is the displacement of spring i, and $f_{i}$ is the sum of forces acting on each mass.
 
