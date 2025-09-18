@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0a1f6b82e86e4018",
+        "id": "751735eed6bf28d0",
         "type": "tabs",
         "children": [
           {
-            "id": "3ad59723276669b2",
+            "id": "8edb973d3ca66061",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MIT Class Notes/6.3952/Lecture 2.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Lecture 2"
+              "title": "New tab"
             }
           }
         ]
@@ -164,25 +160,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3ad59723276669b2",
+  "active": "8edb973d3ca66061",
   "lastOpenFiles": [
-    "MIT Class Notes/6.3952/Lecture 1.md",
-    "MIT Class Notes/6.3952/All Lectures.md",
-    "MIT Class Notes/6.3952/Lecture 4.md",
     "MIT Class Notes/6.3952/Lecture 3.md",
+    "MIT Class Notes/6.3952/Lecture 1.md",
     "MIT Class Notes/6.3952/Lecture 2.md",
-    "MIT Class Notes/6.5820/Lecture 4.md",
-    "MIT Class Notes/6.5820/Lecture 3.md",
-    "MIT Class Notes/6.5820/Lecture 5.md",
-    "MIT Class Notes/6.5820/All Lectures.md",
-    "MIT Class Notes/18.0851/Lecture 4.md",
-    "MIT Class Notes/18.0851/Lecture 1.md",
+    "MIT Class Notes/6.3952/All Lectures.md",
+    "MIT Class Notes/6.3952/Lecture 5.md",
+    "Pasted image 20250918115019.png",
     "MIT Class Notes/6.5820/Lecture 2.md",
     "MIT Class Notes/6.5820/Lecture 1.md",
+    "MIT Class Notes/6.5820/Lecture 3.md",
+    "MIT Class Notes/6.5820/All Lectures.md",
+    "MIT Class Notes/6.5820/Lecture 4.md",
+    "MIT Class Notes/18.0851/Lecture 4.md",
+    "MIT Class Notes/18.0851/Lecture 2.md",
+    "MIT Class Notes/18.0851/Lecture 1.md",
+    "MIT Class Notes/6.3952/Lecture 4.md",
+    "MIT Class Notes/6.5820/Lecture 5.md",
     "MIT Class Notes/18.0851/All Lectures.md",
     "Untitled 1.md",
     "Untitled.md",
-    "MIT Class Notes/18.0851/Lecture 2.md",
     "MIT Class Notes/18.0851/Lecture 3.md",
     "MIT Class Notes/6.5820/Untitled.base",
     "MIT Class Notes/6.5820/Untitled.canvas",
@@ -193,7 +191,6 @@
     "Jailbreaking & Prompt Engineering/Hackapromptle Notes.md",
     "Boiler/Operation and Maintenance of Boilers.md",
     "Boiler/Miscellaneous Question & Answers.md",
-    "Boiler/Parts of a Boiler.md",
     "MIT Class Notes/6.5820",
     "MIT Class Notes/18.0851",
     "MIT Class Notes/6.3952",
