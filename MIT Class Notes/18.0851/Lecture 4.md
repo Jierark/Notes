@@ -3,7 +3,7 @@
 Goal: going back and forth between -u"(x) = f(x)
 
 # Some More Special Matrices
-Suppose we have the following system?
+Suppose we have the following system:
 #drawing fixed-free system
 This is a variation of the problem we've been studying, except the last spring is cut (put another way, the hook constant is 0 here).
 
