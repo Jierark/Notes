@@ -11,10 +11,14 @@
             "id": "8edb973d3ca66061",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "MIT Class Notes/6.5820/Lecture 5.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Lecture 5"
             }
           }
         ]
@@ -162,21 +166,24 @@
   },
   "active": "8edb973d3ca66061",
   "lastOpenFiles": [
-    "MIT Class Notes/6.3952/Lecture 3.md",
-    "MIT Class Notes/6.3952/Lecture 1.md",
-    "MIT Class Notes/6.3952/Lecture 2.md",
+    "MIT Class Notes/18.0851/Lecture 4.md",
     "MIT Class Notes/6.3952/All Lectures.md",
+    "MIT Class Notes/6.3952/Lecture 4.md",
+    "MIT Class Notes/6.3952/Lecture 3.md",
+    "MIT Class Notes/6.3952/Lecture 2.md",
+    "MIT Class Notes/6.5820/All Lectures.md",
+    "MIT Class Notes/6.5820/Images",
+    "MIT Class Notes/18.0851/Images",
+    "MIT Class Notes/6.3952/Lecture 1.md",
+    "MIT Class Notes/6.3952/Images/Pasted image 20250918115019.png",
+    "MIT Class Notes/6.3952/Images",
     "MIT Class Notes/6.3952/Lecture 5.md",
-    "Pasted image 20250918115019.png",
     "MIT Class Notes/6.5820/Lecture 2.md",
     "MIT Class Notes/6.5820/Lecture 1.md",
     "MIT Class Notes/6.5820/Lecture 3.md",
-    "MIT Class Notes/6.5820/All Lectures.md",
     "MIT Class Notes/6.5820/Lecture 4.md",
-    "MIT Class Notes/18.0851/Lecture 4.md",
     "MIT Class Notes/18.0851/Lecture 2.md",
     "MIT Class Notes/18.0851/Lecture 1.md",
-    "MIT Class Notes/6.3952/Lecture 4.md",
     "MIT Class Notes/6.5820/Lecture 5.md",
     "MIT Class Notes/18.0851/All Lectures.md",
     "Untitled 1.md",
@@ -190,7 +197,6 @@
     "Jailbreaking & Prompt Engineering/Prompt Hacking.md",
     "Jailbreaking & Prompt Engineering/Hackapromptle Notes.md",
     "Boiler/Operation and Maintenance of Boilers.md",
-    "Boiler/Miscellaneous Question & Answers.md",
     "MIT Class Notes/6.5820",
     "MIT Class Notes/18.0851",
     "MIT Class Notes/6.3952",
@@ -202,7 +208,6 @@
     "Boiler/img/safetyvalve.jpg",
     "Boiler/img/globevalve.jpg",
     "Boiler/img/checkvalve.jpg",
-    "Boiler/img",
-    "Boiler"
+    "Boiler/img"
   ]
 }

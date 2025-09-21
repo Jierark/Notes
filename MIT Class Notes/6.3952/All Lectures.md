@@ -7,3 +7,6 @@ Class: AI, Decision Making and Society
 [[MIT Class Notes/6.3952/Lecture 3|Lecture 3]] - Exploratory Data Analysis
 
 [[MIT Class Notes/6.3952/Lecture 4|Lecture 4]] - Case Study: Healthcare in Context
+
+[[MIT Class Notes/6.3952/Lecture 5|Lecture 5]] - Datafication
+
