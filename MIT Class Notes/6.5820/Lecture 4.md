@@ -81,8 +81,4 @@ However, we need some additional terms for some specific behavior:
 - $q(t) \to 0$ so the queue is empty.
 To allow for this behavior, we introduce another term, and the final equation for the desired change becomes
 $$\Delta = \alpha*d(C-y(t))-\beta*q(t)$$
-The fairness controller's goal is to divide the desired change $\Delta$ between flows such that the flows converge to fairness. The algorithm is simple:
-- If $\Delta > 0$, then it will divide it equally between all flows.
-- If $\Delta<0$, then it will divide it proportionally to each flow's current rate.
-
-How does the fairness controller measure the number of flows going through the router? We know that per-flow state is not kept. The fairness controller uses a counter that increases by $\frac{1}{r_{i}T}$ for each packet that arrives in a time interval T #TODO expand on this
+The fairness controller's goal is to divide the desired change $\Delta$ between flows such that the flows converge to fairness. We will see the specifics of the fairness controller in the next lecture.
