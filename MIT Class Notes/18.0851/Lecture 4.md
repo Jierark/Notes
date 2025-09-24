@@ -4,7 +4,7 @@ Goal: going back and forth between -u"(x) = f(x)
 
 # Some More Special Matrices
 Suppose we have the following system:
-#drawing fixed-free system
+![[Pasted image 20250922144955.png]]
 This is a variation of the problem we've been studying, except the last spring is cut (put another way, the hook constant is 0 here).
 
 If we do the analysis from before, we'll have the following:
@@ -35,7 +35,7 @@ $$\begin{bmatrix}
 This is a special matrix called $H_3$. This matrix, along with K, is another common matrix that comes up when discretizing boundary value problems and partial differential equations.
 
 Ok, now consider this system:
-#drawing 4 masses connected to each other by springs
+![[Pasted image 20250922145039.png]]
 
 Again, we do a similar analysis and get the following matrix C:
 $$C_{4} = \begin{bmatrix}
@@ -171,7 +171,7 @@ f_{4}
 \end{bmatrix}$$
 More succintly,
 $$\frac{1}{h^2}K_{4}\vec{u}=\vec{f}$$
-Remember, this is the fixed-fixed case. This is the case whether the system is a bunch of masses on springs or a discretized set of points on a hanging bar. You can even tell from the corners that both ends are fixed. Let's suppose they weren't. Then, you would see a larger K for the system.
+Remember, this is the fixed-fixed case. This is the case whether the system is a bunch of masses on springs or a discretized set of points on a hanging bar. You can even tell from the corners that both ends are fixed. Let's suppose they weren't. Then, you would account for that by changing the ends and dimensions of the matrix K.
 
 # Hanging Beam
 Let's now consider a fixed-free system (a hanging beam)

@@ -77,4 +77,18 @@ $$F_{p} \leq F_{p}^{bit-by-bit} + \frac{L_{max}}{r}$$where
 That is, the finishing time of a packet is at most how long it takes to send round-robin and the actual time it takes to send the largest packet we have.
 
 So, how do we actually implement the Fair Queueing algorithm?
-First, we need a way to compute the "finishing" time of a packet. Let's define a **round** as 1 complete
+First, we need a way to compute the "finishing" time of a packet. Let's define a **round** as 1 complete cycle through all queues, sending 1 bit per queue. We're going to use this as our "time" unit.
+
+A quick aside: note that the physical time of a round will change depending on the number of queues. Put another way, $\frac{dR}{dt} \propto \frac{1}{N_{active}}$, where $N_{active}$ is the number of active queues. This isn't a big deal in practice, so long as you always use the rounds as your time basis.
+
+Let's walk through the algorithm itself.
+
+Let's suppose the $K_{th}$ packet of queue i arrives at some time t, corresponding to round R(t). Define $S_{K}^{i}$ as the start round of packet K in queue i (when it gets to leave the queue), and $F_{K}^{i}$ as its finish round (when it finishes being processed).
+
+$S_{K}^{i}$ will depend on the state of queue i. If it is empty, then it can immediately be processed, so $S_{k}^{i} = R(t)$. Otherwise, it will have to sit in the queue until the packet in front of it is sent, so $S_{K}^{i} = F_{K-1}^{i}$. 
+
+The finish round has a simple formula: $F_{K}^{i} = S_{K}^{i} + L_{K}^{i} \text{(The size of the packet)}$. You then send packets based on whichever one has the lowest finish round.
+
+The last piece to figure out is how to define $R(t)$. You can define it as either the start or finish round of the current packet being served, it does not make a big difference.
+
+This will be picked up on the next lecture. =)
