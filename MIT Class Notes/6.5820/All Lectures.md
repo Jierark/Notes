@@ -11,3 +11,7 @@ Class: Computer Networks
 [[MIT Class Notes/6.5820/Lecture 5|Lecture 5]] - Scheduling and Fair Queueing
 
 [[MIT Class Notes/6.5820/Lecture 6|Lecture 6]] - Autonomous Systems and BGP
+
+[[MIT Class Notes/6.5820/Lecture 7|Lecture 7]] - Scalable Peering & Traffic Engineering
+
+#TODO make an index cataloging all key terms and concepts

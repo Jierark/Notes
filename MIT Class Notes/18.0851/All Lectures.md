@@ -13,3 +13,6 @@ Class: Computation Science and Engineering
 [[MIT Class Notes/18.0851/Lecture 6|Lecture 6]] - Eigenvalues and Eigenvectors
 
 [[MIT Class Notes/18.0851/Lecture 7|Lecture 7]] - Diagonalization
+
+
+[[Glossary]] An index cataloging all key terms and concepts

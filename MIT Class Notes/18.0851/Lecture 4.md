@@ -60,7 +60,7 @@ However, any solution we find that satisfies the compatibility condition won't b
 
 # The Hanging Bar Problem
 Suppose we have this system:
-#drawing hanging bar, fixed ends
+![[Pasted image 20251001141055.png]]
 
 We are interested in the displacement u of each point x. There is some amount of mass that is acting at each point which wants to cause the system to sag. So
 $$f(x) = \rho(x)g$$where $\rho(x)$ is a density function, and g is the gravity constant of 9.81 m/s^2 .
@@ -72,7 +72,7 @@ Similar to before, we relate elongations to internal forces using the C matrix l
 $$w(x) = Ce(x)$$Instead of C being spring constants, they're more like compressibility constants, which depends on the material being used. C can also be a function of x itself, but for now we'll assume a constant value of 1.
 
 Okay, now let's go from internal forces to total force:
-#drawing force diagram of a small set of x
+![[Pasted image 20251001141138.png]]
 We have 3 forces:
 $w(x)$ pulls upwards
 $w(x+\Delta x)$ pulls downwards
@@ -85,30 +85,35 @@ This should look familiar. Taking a limit as $\Delta x$ approaches 0, we get
 $$f(x) = -w'(x)$$
 Connecting it to u, we have
 $$f(x) = -\frac{d}{dx}\left( C * \frac{du}{dx} \right) = -c u''(x)$$
+
 Let's summarize what we have:
-#drawing path of u(x) to f(x).
+![[Pasted image 20251001141233.png]]
 
 We can draw some analogies to our spring system. $A$ is the derivative, and $A^T$ is...the transpose of a derivative?
 
-Anyways, this system we have is a **Boundary Value Problem**
+Our overall system looks like $f(x) = -cu''(x), x \in [0,L]$ For simplicity, set L and c = 0.
+
+Then the system we have is a **Boundary Value Problem**
 $$\{ -u''(x)=f(x), x \in [0,1] \}$$
 We also need to account for the boundary conditions here. There's many terms for this: fixed-fixed, Zero displacement, Dirichlet boundary conditions, etc.
 $$u(0) = u(1) = 0$$
-This is a simple solution to solve by hand. We're going to solve this using finite differences instead.
+This might look weird to those who have taken a differential equation class. Think about it this way:
+
+Usually we would specify **initial conditions**, something similar to x(0)=0,x'(0)=0 where we were looking at time-dependent differential equations x(t). Note here that we're looking at u(x): equations which depend on the position x. In these problems, we specify **boundary conditions**, the behavior of the system at specific endpoints. Depending on these boundary conditions, we might have to do different computations to get the overall behavior of the system. These will also relate back to the matrices $K_{n},T_{n},B_{n},C_{n}$ that we saw previously.
+
+This is a simple solution to solve by hand. We're going to solve this using finite difference here to determine it.
 
 Let's say that f = 1. Then $$u(x) = \frac{1-x^2}{2}$$
-We can then plot this:
-#drawing plot of $u(x) = \frac{1-x^2}{2}$
-Let's discretize this plot with a grid. This situation is more typical, where you just have a bunch of points but no knowledge of solutions.
-#drawing take the plot above and discretize x to 6 steps u_i where u_0 = u_5 = 0
+Let's plot this equation, and discretize this plot with a grid.
+![[Pasted image 20251001142854.png]]
 
-We're going to define a step size h, or also $\Delta x$
+We're going to define a step size h = $\Delta x$ = $\frac{1}{n+1}$, where n is the number of samples you want to take.
 
-What's a good approximation of $u'(x)$ at some point x? Let's draw from calculus and use the next point in the sequence:
+What's a good approximation of $u'(x)$ at some point x? We can draw from calculus and use the difference quotient to approximate derivatives. Here, we'll use x and the next closest point $x+\Delta x$
 $$u'(x) \approx \frac{u(x+\Delta x) - u(x)} {\Delta x} = \Delta_{F}u(x)$$
 This is called the **Forward Difference**. We can similarly define a **Backward Difference**
 $$\Delta_{B}u(x) \approx u'(x) \approx \frac{u(x)-u(x-\Delta x)}{\Delta x}$$
-These independently are a little lopsided. We can probably get a more accurate difference by finding a **Centered Difference**
+These independently are a little lopsided. We can  get a more accurate difference by finding a **Centered Difference**
 $$\Delta_{C}u(x) = \frac {u(x+\Delta x) - u(x - \Delta x)}{2\Delta x}$$
 So, how can we quantify how "accurate" our approximations are? We'll say that these differences are an approximation of the derivative, up to some certain order of accuracy. For example,
 $$u'(x) = \Delta_{F}u(x) + O(\Delta x)$$
@@ -123,13 +128,13 @@ In practice, second order accuracy is more preferable to first order since $\Del
 
 We're going to see why these errors are correct using a Taylor expansion. Taylor expansions are really useful for computing function values at points very close to each other.
 
-$$u(x+\Delta x) = u(x) + u'(x)\Delta x + \frac{1}{2}u''(x)(\Delta x)^2 + O((\Delta x)^3)$$ That term at the end is where the "..." usually sits, just written more formally. Technically, you would need the function to be infinitely differentiable for this to converge, but in practice we don't need that many derivatives..
+$$u(x+\Delta x) = u(x) + u'(x)\Delta x + \frac{1}{2}u''(x)(\Delta x)^2 + O((\Delta x)^3)$$ That term at the end is where the "..." usually sits, just written more formally. Technically, you would need the function to be infinitely differentiable for this to converge, but in practice we don't need that many derivatives, just enough for this order of accuracy to be nonzero.
 
 $$u(x-\Delta x) = u(x) -u'(x)\Delta x + \frac{1}{2}u''(x)(\Delta x)^2 + O((\Delta x)^3)$$
 Let's subtract these equations:
-$$u(x+\Delta x) - u(x + \Delta x) = u'(x)2\Delta x + O((\Delta x)^3)$$ Note that the third term doesn't cancel out because these errors are technically different. Divide this equation by $2\Delta x$:
+$$u(x+\Delta x) - u(x + \Delta x) = u'(x)2\Delta x + O((\Delta x)^3)$$Divide this equation by $2\Delta x$ to get our answer
 $$\frac{u(x+\Delta x)-u(x-\Delta x)}{2\Delta x} = u'(x)+O((\Delta x)^2)$$
-Ok, this accuracy measure is correct. In general, this is how you prove the accuracy of finite difference schemes: using Taylor expansions
+In general, this is how you prove the accuracy of finite difference schemes using Taylor expansions.
 
 # Approximating 2nd Derivatives
 So far we have the following derivatives, slightly rewritten in a way that computers usually see it:
@@ -141,7 +146,7 @@ $$=\frac{\frac{u(x+\Delta x)-u(x)}{\Delta x} - \frac{u(x)-u(x-\Delta x)}{\Delta 
 $$u''(x)\approx \frac{u(x+\Delta x)-2u(x)+u(x-\Delta x)}{(\Delta x)^2} = D_{2}u(x)$$
 If we apply the same approximation argument as we did above,
 $$u''(x) = D_{2}u(x) + O((\Delta x)^2)$$
-The proof will be included in pset2.
+
 In a discrete form, we can rewrite this as
 $$(D_{2}u)_{i} = \frac{u_{i+1}-2u_{i}+u_{i-1}}{h^2}$$
 Recall our boundary value problem:
@@ -175,7 +180,7 @@ Remember, this is the fixed-fixed case. This is the case whether the system is a
 
 # Hanging Beam
 Let's now consider a fixed-free system (a hanging beam)
-#drawing hanging beam
+![[Pasted image 20251001144000.png]]
 
 Doing the analysis before, we'll find the same equation
 $$-u''(x) = f(x)$$
@@ -199,4 +204,4 @@ u_{2} \\
 u_{3} \\
 u_{4}
 \end{bmatrix}$$
-Now we can identify this is a fixed-free system because of the 2 in the upper left corner and the 1 in the lower right corner.
+Now we can identify this is a fixed-free system because of the 2 in the upper left corner and the 1 in the lower right corner. We're building up to how to interpret that special collection of matrices we've been seeing repeatedly. $K_{n}$ describes a fixed-fixed system, and $T_{n}$ describes a free-fixed system.

@@ -16,12 +16,12 @@ Some less obvious properties:
 - K is invertible
 - The null space of K is the 0 vector.
 - K is a full rank matrix.
-Whoa, whoa, whoa. How did we get here? Where did these terms come from?
+Let's back up a bit. I just threw a bunch of terms at you, hoping you remembered what they meant. We need to do some review of linear algebra and catch you up to speed on what you need to know.
 
 # Linear Algebra Review
 Suppose I have this graph with 3 defined vectors $\vec{u},\vec{v},\vec{w}$.
 
-#drawing
+![[Pasted image 20251001135025.png]]
 
 Let's suppose I had an unknown vector $\vec{b}$ . Can I find $x_{1}, x_{2}, x_{3}$ such that $x_{1}\vec{u} + x_{2}\vec{v} + x_{3}\vec{w} = \vec{b}$?
 
@@ -78,7 +78,7 @@ b_{3}
 \end{bmatrix}
 $$
 That matrix, let's call it S, and the matrix  A before it seem to be related, no? 
-Yeah. You're right. S is actually the matrix inverse of A. In general, these equations are equivalent:
+S is actually the matrix inverse of A. In general, these equations are equivalent:
 $A \vec{x} = \vec{b}$
 $\vec{x} = A^{-1}\vec{b}$
 Does this always work? Nope. Let's consider the following system:
@@ -101,11 +101,10 @@ b_{2} \\
 b_{3}
 \end{bmatrix}
 $$
-Did you notice? $\vec{u}, \vec{v}, \vec{w}$ are coplanar! Additionally, $\vec{w} = -\vec{u} - \vec{w}$ . These three vectors are linearly dependent (one can be expressed as a linear combination of the others). There's a few properties that arise from this:
+Did you notice? $\vec{u}, \vec{v}, \vec{w}$ are coplanar! As a result, $\vec{w} = -\vec{u} - \vec{v}$ . These three vectors are linearly dependent (one can be expressed as a linear combination of the others). There's a few properties that arise from this:
 - The matrix C does not have an inverse.
 - C has a nonzero null space
 - $C \vec{x} = \vec{b}$ has an infinite number of solutions, provided that $\vec{b}$ is in the column space of C.
-Wait, what are these new terms?
 ## Column and Null Spaces
 For a given matrix A, you can define some useful properties:
 - The **column space** of A is the all vectors it can reach by a linear combination of its vectors. Put another way, Col(A) = $\{A \vec{x} : \vec{x} \in R^n\}$, the set of vectors such that it can be expressed as a matrix-vector product in $R^n$.
@@ -117,7 +116,6 @@ These can tell you a lot about a matrix and it's related matrix-vector equation.
 Oh, here's some other interesting properties:
 - Col($A^T$) will be perpendicular to Null(A)
 - Null($A^T$) will be perpendicular to Col(A)
-- I honestly don't remember the proofs for these or what use they have. Linear Algebra was many years ago for me.
 
 Given a square matrix A, all of these statements are equivalent and true. If one is true, they all are.
 - $A \in R^{n*n}$ is invertible
@@ -128,4 +126,4 @@ Given a square matrix A, all of these statements are equivalent and true. If one
 - Col(A) = $R^n$
 - det(A) $\neq$ 0
 - 0 is not an eigenvalue of A.
-Some of these statements will be expanded on later.
+Don't worry if you don't understand some of these statements for now. We will visit some of these terms in future lectures.

@@ -1,23 +1,19 @@
-Note: I'm going to be honest, I kinda struggled with some pieces of this lecture. Once I have some time, I will probably come back and rewrite some. sections of these notes to make more sense. Apologies to future readers if some of this feels disconnected.
-
 This lecture, we are going to see a very useful tool to help us solve various systems and differential equations: delta functions.
 
-Let's revisit our hanging bar problem from before.
-#drawing hanging bar
-Previously, we mapped the gravitational force as $f(x)=\rho(x)g$.
-
+Let's revisit our hanging bar problem from before. Previously, we mapped the gravitational force as $f(x)=\rho(x)g$.
+![[Pasted image 20250930145510.png]]
 Ideally, we would like to put a point mass at the point a, representing the mass at that point. As a result, we'll use a different function to represent the scenario:
 $$f(x) = m\delta(x-a)$$
 You can interpret this as a translation of the function $\delta$ by some amount a. If we set m = 1, the final equation we will be looking at is
 $$-u''(x) = \delta(x-a)$$ with our usual boundary conditions $u(0) = u(1) = 0$.
 
 The way we will do this is by approximating the mass around the point a:
-#drawing epsilon graph
+![[Pasted image 20250930145559.png]]
 
 Let's represent the function as $\delta_\epsilon(x-a)$. Eventually, we'll take a limit as $\epsilon \to 0$. What are some properties of $\delta_{\epsilon}$?
-$$\int_{0}^{1} \delta_\epsilon(x-a)dx = 1$$ only when a is between 0 and 1.
+$$\int_{0}^{1} \delta_\epsilon(x-a)dx = 1$$ only when a is between 0 and 1. This should make sense: the only "area" you have under this curve is exactly at point a.
 Let's try something more interesting:
-$$\int_{0}^{1} \delta_\epsilon(x-a)v(x)dx $$where $v(x)$ is a continuous or smooth function. This quantity will be approximately equal to v(a) if $a\in[0,1]$. You can prove the error of $O(\epsilon)$ by using a Taylor series, similar to the previous lecture.
+$$\int_{0}^{1} \delta_\epsilon(x-a)v(x)dx $$where $v(x)$ is a continuous or smooth function. This quantity will be approximately equal to v(a) if $a\in[0,1]$. You can prove the error of $O(\epsilon)$ by using a Taylor series, similar to the previous lecture. Again, this makes sense: we only have a nonzero integral at the point a, with it's height being determined by v(a) plus some error in $\epsilon$.
 
 Now, let's take our limit from before.
 $$\lim_{ \epsilon \to 0 } \int_{0}^{1} \delta_\epsilon(x-a)v(x)dx = v(a) = \int_{0}^1\delta(x-a)v(x)dx$$This is what we will take as our definition of delta functions. In engineering, we express delta in the following way:
@@ -25,12 +21,22 @@ $$(\delta:v\to v(a))$$
 Note that this definition only holds if our "test function" v is a continuous function; v doesn't have any physical representation, but it just helps us write functions (whatever that really means). These are also known as a Dirac Delta or Point Impulse, because we're taking the entire load and concentrating it at a specific point. You'd see this commonly in quantum mechanics. 
 
 Let's look at some of its properties regarding integration:
-#drawing delta(x) -> S(x) -> R(x)
 
-S(x) is a step function, and R(x) is a ramp function. The specifics of these aren't too important, you'd find these proofs in a real analysis course (18.100A, for instance). As a piece of trivia, these come from studying Lagrange integrals.
+Integrating $\delta(x)$ gives the function S(x): a step function with the following characteristics:
+$$S(x) = \begin{cases}
+0 & x < 0 \\
+1 & x \geq 0
+\end{cases}$$
+Integrating S(x) gives the function R(x): a ramp function with the following characteristics:
+$$R(x) = \begin{cases}
+0 &  x < 0 \\
+x & x\geq 0
+\end{cases}$$
 
 Since we have these integrals, we can also look at some derivatives as well. We'll have the following property, then:
 $$\delta(x) = \frac{d}{dx}S(x) = \frac{d^2}{dx^2}R(x)$$
+This drawing summarizes what we concluded about these functions:
+![[Pasted image 20250930145759.png]]
 So let's go back to our original problem: 
 $$-u''(x) = \delta(x-a)$$$$u'(x)=-S(x-a)+C$$
 $$u(x)=-R(x-a)+Cx+D$$
@@ -44,12 +50,12 @@ $$0=-(1-a)+C$$
 $$C = 1-a$$
 Our final solution is $$u(x) = -R(x-a)+(1-a)x$$
 So we've got a well-behaved solution using this $\delta$. Let's graph what $u(x)$ looks like:
-#drawing u(x)
+![[Pasted image 20250930145959.png]]
 Interesting note: the slope from 0 to a is 1-a, and then it becomes -a afterwards.
 
-So $\delta$ is a tool that just helps with taking a derivative of step functions. 
+At the end, $\delta$ is a tool that just helps with taking a derivative of step functions. 
 
-Additionally, this construction we have is Green's function. It's a very useful tool for solving some differential equations, especially ones with partial derivatives. It's formally defined as
+This construction we have is Green's function. It's a very useful tool for solving some differential equations, especially ones with partial derivatives. It's formally defined as
 $$G(x,a) = \begin{cases}
 (1-a)x & x<a \\
 (1-x)a & x>a
@@ -64,14 +70,15 @@ Now, how would we do this over the entire system? Here's what our end goal is:$$
 Can we go from this equation to the one above using a delta function?
 
 Let's consider that f(x) is a set of superpositions over all samples: we could evaluate what force acts on each point and then sum it all up to get the total force. Equivalently, we can rewrite f(x) as
-$$\int_{0}^1\delta(x-a)f(a)da$$ So to solve over the entire system, we can use superposition to do this:
-$$u(x)=\int_{0}^{1}G(x,a)f(a)da$$ (I might rewrite this section to make more sense, even I don't 100% understand this)
+$$\int_{0}^1\delta(x-a)f(a)da$$
+To solve over the entire system, we can use superposition to do this:
+$$u(x)=\int_{0}^{1}G(x,a)f(a)da$$
+(Evaluating f(x) at multiple points)
 
 Alright, let's jump back to the discrete world.
-
-#drawing delta function drawing
+![[Pasted image 20251001150057.png]]
 Here, we say that there is an impulse at point a. If we discretize this a bit, we'll get
-#drawing 1 hot encodings building
+![[Pasted image 20251001150117.png]]
 Notice that this value doesn't go to infinity. It stays at 1. This vector we have is a familiar one: it is a one-hot encoding. They're also known as Kronecker deltas and take the form 
 $$\delta_{i,j} = \begin{cases}
 1 & i=j \\

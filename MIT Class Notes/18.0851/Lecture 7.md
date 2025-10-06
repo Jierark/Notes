@@ -77,7 +77,7 @@ $$S = \frac{1}{\sqrt{ 2 }}\begin{bmatrix}
 $$\Lambda = \begin{bmatrix}1 & 0 \\ 0 & 3\end{bmatrix}$$
 Important note: The order which you set the eigenvalues and eigenvectors actually does not matter. It is extremely important that you are consistent in your notation, though. Whatever you set as the first eigenvalue in $\Lambda$ must match the first eigenvector in $S$.
 
-Anyways, you can see that $SS^{T} = S^TS = I$, so this property holds for an orthonormal basis:
+You can see that $SS^{T} = S^TS = I$, so this property holds for an orthonormal basis:
 $$S^T = S^{-1}$$
 This makes diagonalization much easier to compute:
 $$A = S\Lambda S^T$$
@@ -108,20 +108,18 @@ Now, we could just solve this differential equation directly, but solving these 
 Recall from differential equations the following facts:
 $$u'(x)=\lambda u(x) \to u(x) = Ce^{\lambda x}$$
 $$-u''(x)=k^2u(x) \to u(x) = A \sin(kx) + B\cos(kx)$$
-(Aside: if $u(0)=u(1)=0$, then you can show that you can never have an exponential solution)
+Going back to our original problem, we can conclude that $\lambda=k^2$, and $u(x)$ will be equal to the solution above in 2nd derivatives (technically, there is also a way to do this using complex exponentials. I might include that later). Let's plug in our boundary conditions and see what happens:
 
-Going back to our original problem, we can conclude that $\lambda=k^2$, and $u(x)$ will be equal to the solution above in 2nd derivatives. Let's plug in our boundary conditions and see what happens:
-
-$$u(0)=A\sin(0)+B\cos(0) \to 0=B$$
-$$u(1)=A\sin(k)=0, k = n\pi, n\in Z$$ (Z is all integers)
+$$u(0)=A\sin(0)+B\cos(0) \to 0=B\text{(sin of 0 is 0, you only have a cosine term)}$$
+$$u(1)=A\sin(k)=0, k = n\pi, n\in Z\text{(This is only 0 when the sine term is 0)}$$ (Z is all integers)
 Then we can conclude
 $$\lambda_{n} = n^2\pi^2$$
 $$u_{n}(x)=A\sin(n\pi x)$$
 This is the solution for the continuous version of the eigenvalue equation. It might be easier to visualize what this solution space looks like:
-#drawing 
+![[Pasted image 20251001152009.png]]
 
 This means that the functions that fit in the boundary conditions are very specific oscillations. The process is known as quantization in physics.
-#clarify 
+
 We'll need this context for later lectures when we look at time dependent systems.
 
 ### Orthogonality of Functions
@@ -137,10 +135,28 @@ $$\vec{y}_{1}=\begin{bmatrix}\sin\left( \frac{\pi}{5} \right) \\ \sin\left( \fra
 - $\vec{y_{2}}$ can be found from a similar procedure:
 $$\vec{y}_{2}=\begin{bmatrix}\sin\left( \frac{2\pi}{5} \right) \\ \sin\left( \frac{4\pi}{5} \right) \\ \sin\left( \frac{6\pi}{5} \right) \\ \sin\left( \frac{8\pi}{5} \right) \\ \end{bmatrix}$$
 As it will turn out, these will be exact values and not numerical approximations to some order of error. Each associated eigenvalue will have the value
-$$\lambda_{i} = 2-2\cos(k\pi h) = 4\sin^2\left( \frac{k\pi h}{2} \right)$$
+$$\lambda_{i} = 2-2\cos(k\pi h) = 4\sin^2\left( \frac{k\pi h}{2} \right), k = 1,2,3,\dots ,n$$
+where $h=\frac{1}{n+1}$, the interval space chosen.
 To finish up, we go back to the S matrix from before:
 $$S=\begin{bmatrix}
 \vec{y_{1}}| & \vec{y_{2}}|\dots|\vec{y_{n}}
 \end{bmatrix}$$
 We can actually compute S entry by entry with the following formula:
-$$S_{jk}=\sin(jk\pi h)$$where h is the interval space chosen. Although it's been omitted this whole time, use the constant A to make S an orthonormal basis, or whatever.
+$$S_{jk}=\sin(jk\pi h)$$Although it's been omitted this whole time, use the constant A to make S an orthonormal basis.
+
+# Appendix
+If you're still kind of confused like I was when writing this, these notes might help:
+
+So we're jumping between eigenvectors and eigenfunctions and a lot of in between. How do you keep track of these things?
+
+Think of it this way: There are two worlds we can be interested in, depending on your field of interest. You either are working with a set of discrete points, or you are working with a continuous function.
+
+In a discrete setting, you would be working with the following equation of 
+$$K\vec{y}=\lambda \vec{y}$$
+We would solve this using the familiar strategies of linear algebra (solve $\det(K-\lambda I)=0$, then solve for each associated eigenvector by plugging in the eigenvalues).
+
+Now, let's say we're in the continuous world. Instead of a set of discrete points, we are working with a function u(x). Let's say we were interested in the following derivative
+$$-\frac{d^2}{dx^2}u(x)=\lambda u(x)$$
+This we would solve with techniques from differential equations. Given the setup, we are going to work with some periodic function, namely a combination of cosine and sine. And the lambda will take a specific form of $\lambda_{n}=n^2\pi^2$ (there are infinitely many of these equations). Let's say we plotted one of these functions u. If I take **equal interval samples**, it turns out that I will get the exact values of the eigenvectors.
+
+What can we conclude? Eigenvectors and eigenfunctions fulfill similar roles in their respective worlds. Hopefully this clarifies some things. 

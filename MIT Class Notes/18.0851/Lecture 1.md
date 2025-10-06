@@ -3,9 +3,7 @@ Is available on libgen btw (some mirrors won't have it)
 
 # A Special Matrix K
 Consider the following system. You have 3 masses, all connected by springs from floor to ceiling. 
-
-#drawing 
-
+![[Pasted image 20251001134302.png]]
 How does the system react if we move the masses around? Some of the springs will elongate, others will compress. Mathematically, we want to find the values $u_{1}, u_{2}, u_{3}$ from $f_1, f_2, f_3$, where $u_{i}$ is the displacement of spring i, and $f_{i}$ is the sum of forces acting on each mass.
 
 Okay, let's start with some simple equations. Let's define the elongation/strain of each spring as such:
@@ -55,8 +53,7 @@ e_{3} \\
 e_{4}
 \end{bmatrix}
 \end{gather}$$
-Let's call that matrix C.
-(for simplicity, we're going to assume the springs are all the same. I also don't know where the signs went, so we'll just stick it in c even though that's completely wrong)
+Let's call that matrix C. For simplicity, assume all springs are equal.
 
 If you look at the system, you will notice there should be a third force on all of these: gravity. You will also notice that this system is not moving. What does this mean? The sum of forces acting on each mass is 0. So, for each mass, we'll have the following equation for each, representing all forces acting on it:
 $w_{i} - w_{i+1} = m_{i}g$
@@ -80,7 +77,7 @@ m_{3}g = f_{3}
 \end{bmatrix}
 \end{gather}
 $$
-Hey, we've come full circle. Also, that matrix looks familiar. It's actually just $A^T$. 
+To the astute observer, the matrix should look familiar. It is actually just $A^T$. 
 
 To recap where we are,
 - We started with equations of displacement.
@@ -117,3 +114,5 @@ $$\begin{gather}
 \end{bmatrix}
 \end{gather} $$
 This matrix is a special matrix known as $K_3$, or $K_n$ in the general case.
+
+This matrix is part of a family of other matrices, consisting of $K_{n},C_{n},T_{n},B_{n}$. As it turns out, these matrices appear frequently in a wide range of fields, and each one can be used to describe a specific problem outline. Keep this in mind as we go further in the class and look at various systems.

@@ -1,10 +1,10 @@
 This lecture we will be looking at eigenvalues and eigenvectors. These are super important in modeling dynamic systems, where many things could be changing over time. A common example is protein folding - the interest is to look at how a given strand of protein might fold due to the various forces acting on the atoms and molecules comprising it. The system will continue to change until it reaches a threshold of minimum energy, which marks stability.
 
-For simplicity, let's look at a special case: a linear system that is time invariant
+For simplicity, consider a special case: a linear system that is time invariant
 $$\frac{d\vec{u(t)}}{dt} = A\vec{u(t)}$$ where $\vec{u(t)} = \begin{bmatrix}u_{1}(t) \\ u_{2}(t) \\ \dots \\ u_{n}(t)\end{bmatrix}$
 By time invariant, we mean that the matrix A is constant and does not depend on time.
 
-How do we commonly solve these? Usually with eigenvalues and eigenvectors (hope you remember your differential equations)
+How do we commonly solve these? Eigenvalues and eigenvectors.
 
 # Eigenvalues and Eigenvectors
 Let's look at the following equation:
@@ -13,7 +13,7 @@ We say that $\lambda$ is an eigenvalue when it satisfies the relationship above.
 
 Here's a property of eigenvalues and eigenvectors: What happens if we repeatedly apply A to this?
 $$A^2\vec{y} = (AA)\vec{y} = A(A\vec{y}) = A(\lambda \vec{y}) = \lambda A\vec{y} = \lambda^2\vec{y}$$
-The eigenvalues will scale accordingly depending on how many repeated multiplications you do. Additionally, this property will hold:
+The eigenvalues will scale accordingly depending on how many repeated multiplications you do. Additionally, one can prove that the following is true:
 
 $$A^{-1}\vec{y} = \frac{1}{\lambda}\vec{y}$$
 Okay, let's go back to our original problem:
@@ -32,14 +32,14 @@ $$c(t) = e^{\lambda t}$$
 So our final equation is the following:
 $$\vec{u}(t)=e^{\lambda t}\vec{y}$$
 The exponential function has multiple possible behaviors, depending on the eigenvalues. Here's a plot which showcases the possible states:
-#drawing 
+![[Pasted image 20251001150552.png]]
 Let's take a look at the complex solutions. Suppose that $\lambda=a+ib$. Using Euler's rule, we can split the exponential e into a sine/cosine pair:
 $$e^{\lambda t} = e^{(a+ib)t} = e^{at}e^{ibt}$$
 $$=e^{at}(\cos(bt)+i\sin(bt))$$
-This should look familiar from a differential equation class (if not, look into second-derivative equations and how they get solved.)
+This should look familiar from a differential equation class (Euler's Formula. Might be important to remember)
 
 Okay, we have the tools to solve some interesting systems. Let's consider this system:
-#drawing mass hanging from ceiling
+![[Pasted image 20251001151100.png]]
 
 We have the following equations to define this system:
 $$\dot{x}(t)=v(t)$$

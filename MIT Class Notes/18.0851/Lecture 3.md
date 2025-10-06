@@ -42,7 +42,7 @@ $$UU^T = U^TU = I$$ The proof for this is easy to show for $U^TU$ since you know
 
 # LU Decomposition
 Let's go back to our spring system from previous lectures.
-#drawing
+![[Pasted image 20251001140717.png]]
 Let's say we want to solve the system where $f=\begin{bmatrix}1 \\ 1 \\ 1 \end{bmatrix}$
 $$K_{3}\vec{u} = \begin{bmatrix}
 2u_{1}-u_{2} \\
@@ -70,7 +70,7 @@ $$$$\to \begin{bmatrix}
 0 & \frac{3}{2} & -1 & |\frac{3}{2} \\
 0 & 0 & \frac{4}{3} & | 2 
 \end{bmatrix}
-\left( row_{3} \gets row_{3} + \frac{2}{3} \right)$$
+\left( row_{3} \gets row_{3} + \frac{2}{3}row_{2} \right)$$
 
 Then you can do back-substitution and get the solution to the system.
 With this form, we can get some other properties of matrices.
@@ -97,4 +97,4 @@ This is our LU decomposition of K. L is a lower diagonal matrix that "encodes" o
 
 Decomposing matrices this way allows us to compute certain quantities much easier than before. For example, the determinant of $K_3$ is the product of the determinants of L and U, which are easy to compute. L has a determinant of 1, and the determinant of U is the product of the entries on the diagonal. 
 
-You could also decompose U into two more matrices, but this is an exercise in the homework and was not mentioned during lecture.
+You could also decompose U into two more matrices D, $L^T$, but this is an exercise in the homework and was not mentioned during lecture. LU decomposition is the process by which we would solve matrix-equation systems by hand.
