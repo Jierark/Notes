@@ -52,5 +52,11 @@ At the lowest level, if there are still ties between which routers to pick, a ro
 # Issues with BGP
 BGP is an incredibly complex protocol with many parameters that need to be fine-tuned to work correctly. It also needs to accommodate ISP policies which may not be optimal in terms of delays or lengths. As a result, BGP is prone to misconfiguration. BGP is also slow to converge during failure recovery, and it can suffer from performance, especially in app-specific contexts.
 
-BGP also has a large issue with security and a lack of authorization. This is mostly due to its design. For an example, see the example in the reading with Youtube and Pakistan.
-- 
+BGP also has a large issue with security and a lack of authorization. This is mostly due to its design. For an example, see the example in the reading with Youtube and Pakistan. There are two possible ways to include security in BGP:
+- Origin authentication - An AS announces that it "owns" a specific IP range. This requires either a form of registry or another self-certifying binding between the AS and the specified IP range.
+- Path authentication - Routes are augmented with a cryptographic scheme such that any tampering of the advertisement is difficult. One can achieve this with a number of asymmetric cryptography schemes.
+
+BGP also suffers from a vulnerability known as BGP hijacking. In short, a malicious BGP router can announce it has a path to a certain IP range to neighboring ASes. This router is placed in a way such that the actual owner of the IP range is far from the targeted ASes. There are a few potential harms of BGP hijacking:
+- Loss of availability as packets going to that destination end up going nowhere.
+- Abuse of IP Addresses (not sure what this means)
+- Fake end points can hijack requests intended for the destination and steal sensitive information. This has already been used to steal cryptocurrency, for example.
