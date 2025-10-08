@@ -14,4 +14,11 @@ Class: Computer Networks
 
 [[MIT Class Notes/6.5820/Lecture 7|Lecture 7]] - Scalable Peering & Traffic Engineering
 
+[[Lecture 8]] - Fairness Models & Network Utility Maximization
+
+[[Lecture 9]] - Video Streaming
+
+[[Lecture 10]] - GenAI and LLMs for algorithmic and protocol design
+
+
 #TODO make an index cataloging all key terms and concepts

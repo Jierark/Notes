@@ -20,5 +20,37 @@ Why would we do it this way? Consider classical shortest path algorithms, such a
 - There's no way to "keep routes secret" (which here is done by specific export policies)
 We can use path-vector routing to achieve both of those qualities, and each AS gets to apply their own local policy.
 
-# Internal and External BGP
-You might be wondering how routes are exchanged within an AS. We know that between them, border routers handle most of that communication.
+# Internal BGP
+So far, we have been looking at external BGP, which exchanges routes between ASes. Internal BGP, as the name suggests, is the protocol by which external routes are distributed between routers inside an AS. Note that this is separate from IGP (Internal Gateway Protocol), which exchanges routes to internal destinations within the routers of an AS. 
+
+There are two different ways to do iBGP:
+- Full Mesh - Each eBGP router has an iBGP session with every other router in the AS. 
+- Route Reflection - Each eBGP router has an iBGP session with a logically central route reflector, and each router has an iBGP session with the route reflector.
+Note that for an AS with 1 border router, there isn't a need for iBGP.
+
+# Route Attributes and Route Selection
+BGP contains multiple ways to choose the "best" routes, with each one focusing on a different attribute of the route. Multiple attributes may be considered in order to break a multiple-way tie between routes.
+
+## Local Preference
+Local Preference specifies an order over which routes outbound traffic should take. Higher values take priority over lower ones, but lower valued routes may be taken in certain conditions (for example, network outages).
+
+
+### AS Path Length
+If there are multiple routes with the same local preference, this attribute breaks the tie by selecting the path with the shortest AS path length. However, this route may not be the shortest in terms of IP path length or lowest delay.
+
+### Multiple Exit Discriminator
+??? there's 1 slide on this??? guess i'll go watch the recording...
+
+### Hot Potato Routing
+Interestingly, more than 1/2 of internet paths aren't exactly symmetric. This means the paths from S to D and D to S may not traverse the same ASes. One potential reason is that an AS typically has mutliple border routers, so a packet from inside has multiple possible routes. This leads to the idea of Hot Potato Routing.
+
+The general idea of Hot Potato Routing is that traffic needs to leave the AS as soon as possible. To do so, it prefers routes with shorter IGP path cost to next-hop. However, this can cause large traffic shifts if IGP weights shift suddenly.
+
+### Router ID Tiebreaking
+At the lowest level, if there are still ties between which routers to pick, a router ID may be hardcoded to be favored over other ones.
+
+# Issues with BGP
+BGP is an incredibly complex protocol with many parameters that need to be fine-tuned to work correctly. It also needs to accommodate ISP policies which may not be optimal in terms of delays or lengths. As a result, BGP is prone to misconfiguration. BGP is also slow to converge during failure recovery, and it can suffer from performance, especially in app-specific contexts.
+
+BGP also has a large issue with security and a lack of authorization. This is mostly due to its design. For an example, see the example in the reading with Youtube and Pakistan.
+- 
