@@ -55,10 +55,16 @@ While useful, BBA does have a few lingering issues:
 Video playback is still quite an open problem and new literature is continuously being worked on to this day.
 
 # Real-Time Video
-Unlike video streaming, real-time video is a harder problem. Instead of having to upload the video to a server, the video must be recorded, encoded, and sent to other video participants on the fly. This is much more latency-sensitive, so it should be done in a fast manner. This is what the Salsify paper was working on. Current real-time video systems cannot recover fast when network conditions suddenly shift. This is what the users sees as lag/stuttering of video.
+Unlike video streaming, real-time video is a harder problem. Instead of having to upload the video to a server, the video must be recorded, encoded, and sent to other video participants on the fly. This is much more latency-sensitive, so it should be done in a fast manner. Current real-time video systems cannot recover fast when network conditions suddenly shift. This is what the users sees as lag/stuttering of video. Congestion control, alone, is not sufficient enough to solve this issue.
 
-# Salsify
-There are two control loops that are maintained in Salsify:
-- Transport Control - manages the sending of packets in a similar fashion to congestion control that we've seen many times
+There are two control loops that need to be maintained.
+- Transport protocol - manages the sending of packets in a similar fashion to congestion control that we've seen many times
 - Video Codec - Online compression of webcam or whatever medium is being used to record video
-#TODO 
+The transport periodically updates the target bit rate it can sustain based on its perceived network conditions, and the video codec will compress the bits at the targeted rate. The problem is that the video codec is only able to achieve this bit rate *on average*. The actual frame sizes can spike and dip all over the place.
+
+Salsify addresses these issues by figuring out a specific interface that handles both transport protocol and video codec. Let's look at the specific interfaces to see how.
+
+Encoding and decoding lie at the core of video generation. Encode converts each frame into bits, while decoding does the opposite. An important note is that the video codec is actually stateful - it maintains a set of reference frames that it uses to determine how to compress the next frame and is updated continuously. There isn't a way to save or restore a previous state to encode the same frame multiple ways.
+
+Salsify instead uses functional programming - encode and decode both take in a state variable in addition to the video or frame, respectively. Each one also outputs the modified state. This allows the same frame to be encoded using different bitrates, and it can choose the best frame to match what the transport protocol requests. Also the evaluation methods are pretty cool.
+
