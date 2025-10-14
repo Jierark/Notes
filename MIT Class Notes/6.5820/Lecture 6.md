@@ -1,5 +1,5 @@
 The modern Internet is huge. Imagine if we had to figure out direct connections between all endpoints. It quite literally is impossible to achieve. Fortunately, we have large ISPs that manage our connections and a whole system of other network providers connecting each other to power the internet.
-#drawing my crude drawing of the internet
+![[Pasted image 20251014153425.png]]
 These ISPs operate on Autonomous Systems, which handle the routing of packets to whatever destinations they need to go. This lecture, we're going to cover how these Autonomous Systems connect to endpoints and other AS, and the principle behind how routing information is shared.
 
 # Interconnection

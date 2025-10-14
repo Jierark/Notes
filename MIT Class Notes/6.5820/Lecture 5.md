@@ -20,7 +20,7 @@ $\Delta > 0$ means we want to increase all our flows. In TCP Reno, this meant in
 $\Delta < 0$ means we want to decrease out flows. In general AIMD schemes, we would decrease the window size by some fractional constant. We note that this decrease is proportional to the current window size. Thus, we should divide $\Delta$ proportionally to all the sending rates.
 
 Now, we will look at how we actually compute the splitting of $\Delta$ mathematically. Let's look at the following example of a control interval:
-#drawing 
+![[Pasted image 20251014153014.png]]
 
 Let's suppose that $\Delta > 0$ and we have 3 flows we want to split it over. We obviously can't just send the aggregate rate back. We need to split the desired change over each flow, over each packet that was sent. The question now is: how much does each acknowledgement change a given rate's window size?
 
@@ -39,7 +39,7 @@ $$\hat{N} = \hat{N} + \frac{1}{rd}$$where r is the flow rate, computed above fro
 
 # Scheduling
 In a scheduling scheme, packets go through a classifier and enter one of many queues. A scheduler at the end then follows specific rules to send a packet from each queue.
-#drawing 
+![[Pasted image 20251014153113.png]]
 
 This get's around a potential issue with TCP algorithms: a device, in theory, could open multiple TCP flows and gain an unfair share of the network. In practice, there are a few applications where multiple TCP connections are opened, such as the downloading of large files. As it turns out, this really is not a big problem, and the concept of TCP fairness has also not been a huge problem when proposing new algorithms.
 
@@ -59,7 +59,7 @@ Algorithmically, we can determine these with the water-filling algorithm, which 
 - The algorithm can be generalized to cases where some senders require specific weights relative to the others.
 
 Suppose we have three queues as such:
-#drawing
+![[Pasted image 20251014153207.png]]
 
 Let's say we use a round robin scheme to schedule packets. Is it max/min fair? No, it will tend to spend more time on queues with larger average packet sizes.
 
@@ -89,6 +89,4 @@ $S_{K}^{i}$ will depend on the state of queue i. If it is empty, then it can imm
 
 The finish round has a simple formula: $F_{K}^{i} = S_{K}^{i} + L_{K}^{i} \text{(The size of the packet)}$. You then send packets based on whichever one has the lowest finish round.
 
-The last piece to figure out is how to define $R(t)$. You can define it as either the start or finish round of the current packet being served, it does not make a big difference.
-
-This will be picked up on the next lecture. =)
+The last piece to figure out is how to define $R(t)$. You can define it as either the start or finish round of the current packet being served; it does not make a big difference.

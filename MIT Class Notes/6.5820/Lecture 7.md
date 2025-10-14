@@ -58,5 +58,39 @@ BGP also has a large issue with security and a lack of authorization. This is mo
 
 BGP also suffers from a vulnerability known as BGP hijacking. In short, a malicious BGP router can announce it has a path to a certain IP range to neighboring ASes. This router is placed in a way such that the actual owner of the IP range is far from the targeted ASes. There are a few potential harms of BGP hijacking:
 - Loss of availability as packets going to that destination end up going nowhere.
-- Abuse of IP Addresses (not sure what this means)
+- Abuse of IP Addresses
 - Fake end points can hijack requests intended for the destination and steal sensitive information. This has already been used to steal cryptocurrency, for example.
+
+# Espresso
+Google offers many services that need to be connected to many ISPs and users, and they often are handling terabits of traffic that require low latency. Traditional routers are not the best for a few reasons:
+- They are very expensive, often being 4-10x the cost per port
+- Routers are often rigid and feature-limited by vendors
+- There is an inherent risk of upgrades and failures, which can affect large amounts of traffic.
+Espresso utilizes Google's internal servers to handle many of the routing logic, as opposed to traditional architectures where the edge routers handle the logic. It will meet the following requirements of Google:
+- Efficiency - lower cost and better utilization
+- Interoperability - supports BGP and IPv4/6
+- Reliability - availability is up 99.999% of the time.
+- Incremental Deployment - can co-exist with legacy standards.
+- High feature velocity - new features can be up and running within weeks instead of years.
+
+Before we get into the specifics, let's cover a few key definitions
+- BGP: Border Gateway Protocol - already covered in detail
+- SDN: Software-Defined Network - moves control from distributed routers into logically-centralized server software
+- MPLS: Multiprotocol Label Switching - label-based forwarding as opposed to direct addresses
+- GRE tunnel: Encapsulation for Virtual Links
+- FIB: Forwarding Information Base - (Forwarding Table which is based on the routing table)
+- ACL: Access Control List (where you set firewall rules)
+- DDoS: Distributed Denial of Service - a type of network attack whose origin spans multiple IP addresses, with the goal of rendering a service inoperable or completely offline.
+
+Espresso was designed with the following design principles in mind:
+- It utilizes a Hierarchical control plane, where a local control plane provides fast, local decisions to outages and a global plane handles overall traffic engineering
+- It utilizes a fail-safe system: if the global controller fails or is unreachable, then it will maintain the last known good state
+- Programmability - Logic of handling packets are done in servers and software, all within Google's internal servers, as opposed to the routers
+- Testability - Automated and layered testing can be done. Also Canaries, whatever that means.
+- Intent-driven management - goals can be easily and automatically translated to code and configuration
+
+Externally, Espresso operates the same as a regular BGP instance. Internally, Espresso is able to do much more with the packet, including traffic optimization, load balancing, and apply ACL rules. The paper also claims they are able to perform DDoS handling in software, but it's more likely that it's not as simple as it is described based on how other DDoS mitigation mechanisms work.
+
+The use of a hierarchical control plane also allows for more flexibility - local controllers can use application-specific contexts to handle routing decisions as opposed to only relying on routing tables. This turns out to be significant in applications such as youtube.
+
+Evaluation results of Espresso resulted in more internet traffic to Google, as well as improved quality of experience for videos and a 50x faster release velocity than traditional routers.

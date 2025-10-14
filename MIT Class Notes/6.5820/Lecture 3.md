@@ -1,8 +1,3 @@
-Topics:
-Bandwidth-delay product
-TCP-Reno Analysis
-CUBIC Algorithm
-BBR
 
 Recall our problem from [[MIT Class Notes/6.5820/Lecture 2|Lecture 2]]. We were designing a congestion control algorithm, and ended on a template for a TCP congestion control algorithm.
 
@@ -10,7 +5,7 @@ Let's go back to the RTT. RTT can change depending on a multitude of factors, so
 
 We now define a new quantity called the **Bandwidth-Delay Product**, which is the product between the rate of the bottleneck and $RTT_{min}$. This represents the number of packets that can be in transit at once without filling any queues.
 This is what the throughput might look like for this system:
-#drawing graph of system and annotations
+![[Pasted image 20251014152231.png]]
 
 What happens when we drop packets? That's our signal for congestion, and we scale our window down.
 	- Previously, we had these rules:
@@ -21,7 +16,7 @@ TCP-Reno builds on this idea:
 - To maximize throughput, we want to set $B \geq BDP$ , which will bounce the queue between almost empty and almost full. 
 
 Ok, let's do some analysis on our current algorithm:
-#drawing time-vary plot
+![[Pasted image 20251014152350.png]]
 
 We're going to define a few quantities here:
 - N = number of packets sent in a given cycle
@@ -29,15 +24,14 @@ We're going to define a few quantities here:
 - $p_{drop}$ (drop probability) = 1/N (1 of every N packets get dropped)
 - The throughput of this, on average, will be $\frac{N}{\tau}$
 Then we can do some interesting analysis
-$\tau = \frac{w_{max}}{2}*RTT$
 - $N = \sum_{i=0}^{\frac{w_{max}}{2}}\frac{w_{max}}{2}+i$ = $\frac{3}{8}(w_{max})^2$
 - $p_{drop} = \frac{8}{3(w_{max})^2} \to w_{max} = \sqrt{\frac{8}{3p_{drop}}}$
 - Throughput = $\frac{N}{\tau} = \frac{3}{8}(w_{max})^2 * \frac{1}{\frac{w_{max}}{2}*RTT} = {\sqrt{\frac{3}{2p_{drop}}}\frac{1}{RTT}}$
-- There' a subtle issue: in a system with multiple connections, connections with smaller RTTs will have higher throughput. That seems unfair.
+- There's a subtle issue: in a system with multiple connections, connections with smaller RTTs will have higher throughput. That seems unfair.
 
 # TCP-CUBIC
 TCP Reno has a property where it does not remember the previous window size. As a result, it would not be able to increase its window size if the BDP increases.
-#drawing Graph
+
 The idea of cubic is the following:
 - After we drop a packet, we log the previous maximum window size, and we want to increase the window size back to that value, $w_{max}$ in some time K. If there isn't any congestion, then we can increase aggressively while there still is no congestion.
 - Here, K is a real time measured in seconds, not measured in RTTs.

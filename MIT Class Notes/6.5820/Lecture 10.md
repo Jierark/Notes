@@ -24,3 +24,4 @@ $$\frac{Throughput}{Delay^{\lambda}}$$ is a possible option. This could be exten
 The paper uses the utility function defined as follows:
 $$u = \frac{tput-tput_{0}}{tput_{0}} - \lambda\left( \frac{delay - delay_{0}}{delay_{0}} \right)$$
 Where $tput_{0}, delay_{0}$ are measured from the best BBR implementation across 243 different implementations. 
+

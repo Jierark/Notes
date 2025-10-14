@@ -37,7 +37,7 @@ RED is a very nice solution, and although the implementation exists in routers, 
 - A bad choice of parameters can cause the performance to be worse than the simple drop-tail implementation.
 	- While these parameters can be derived from control theory, it is a difficult problem.
 - Additionally, because it uses the queue length as its metric to drop packets, the drop probability is proportional to the squared number of senders.
-
+## PI - Proportional Integral
 Due to these issues, we should look to separate the queue length from the number of senders. This is what the Proportional Integral (PI) Algorithm does.
 - The goal of PI is to keep the current queue size $q(t)$ as close to some defined reference point $q_{ref}$ .
 	- Another way to say this is that the error term $e(t) = q(t) - q_{ref}$ should be kept as close to 0 as possible.

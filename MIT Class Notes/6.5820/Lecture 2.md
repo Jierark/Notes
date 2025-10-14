@@ -1,7 +1,7 @@
 One of the main problems in designing networks is congestion. This lecture, we will look at End-to-End solutions  for this.
 
 The simplest form of the problem is as follows
-#drawing n sources -> Router R_1 -> Router R_2 -> destinations
+![[Pasted image 20251014150122.png]]
 Assume that all data being sent is the same size. We are interesting in how to best send packets through a bottleneck - the first place where there becomes more data being received than being sent, or the slowest link in the path.
 
 # Goals of the Algorithm
@@ -33,9 +33,8 @@ An overarching question with this is: What is the best way to set this coefficie
 Chiu & Jian found that additive increase, multiplicative decrease algorithms are the best solution for setting coefficients.
 
 A quick aside: the graphs in their paper are known as phase plots, which look at how dynamic systems change over time.
-#drawing example plot
-#TODO explanation of plot
-
+![[Pasted image 20251014150312.png]]
+Additive increases move
 This brings us to the first pass of a TCP algorithm:
 
 # TCP Algorithm
