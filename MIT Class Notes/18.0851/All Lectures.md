@@ -14,5 +14,9 @@ Class: Computation Science and Engineering
 
 [[MIT Class Notes/18.0851/Lecture 7|Lecture 7]] - Diagonalization
 
+[[MIT Class Notes/18.0851/Lecture 8|Lecture 8]] - Positive Definite Matrices
+
+[[MIT Class Notes/18.0851/Lecture 9|Lecture 9]] - Time Integrations
+
 
 [[Glossary]] An index cataloging all key terms and concepts
