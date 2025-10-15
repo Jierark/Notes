@@ -66,13 +66,13 @@ Let's say we use a round robin scheme to schedule packets. Is it max/min fair? N
 Ok, well what if we did a bit-by-bit round robin? The idea is we only send 1 bit in each round, from each queue. This would indeed by max/min fair. But good luck trying to parse those requests with how split each of them are going to be.
 
 Can we do an approximate version of bit-by-bit round robin? Maybe. Let's do the following:
-1) Determine the finish time of each packet if it was sent bit-by-bit. (assume no future arrivals #clarify)
+1) Determine the finish time of each packet if it was sent bit-by-bit. 
 2) Send packets in order of finish times.
 With some analysis, you can show the following property for each packet:
 $$F_{p} \leq F_{p}^{bit-by-bit} + \frac{L_{max}}{r}$$where
 - $F_{p}$ is the finish time of a packet using this scheme
 - $F_{p}^{bit-by-bit}$ is the finish time of a packet using bit-by-bit round robin.
-- $L_{max}$ is the maximum packet size #clarify
+- $L_{max}$ is the maximum packet size 
 - $r$ is the sending rate of the link
 That is, the finishing time of a packet is at most how long it takes to send round-robin and the actual time it takes to send the largest packet we have.
 

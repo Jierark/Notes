@@ -40,9 +40,9 @@ $$w(t)=C(t-K)^3+w_{max}$$ where C, K are constants.
 What does this look like? Well, before time K, it aggressively increases, but then tapers as it gets closer to K.
 How do we choose our constants? Well, we can make C dependent on K with the following:
 $$w(0^+) = C(0-K)^3+w_{max} = (1-\beta)w_{max}$$
-$$C=\frac{Bw_{max}}{K^3}$$
+$$C=\frac{\beta w_{max}}{K^3}$$
 There are some other subtleties to the algorithm, too. For example, when computing the next window size, if the size from TCP Reno is larger than what this algorithm computes, then it chooses that one. Essentially, it always chooses the larger of the two window sizes.
-#TODO - I might reread the paper to double check this
+
 
 
 # BBR
