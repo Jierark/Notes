@@ -1,4 +1,3 @@
-#TODO finish this after Salsify slides gets posted or I get to the recording
 
 About 70% of peak internet traffic is video, with about 15 billion hours being streamed on Netflix each month. As a result, there is much interest in ensuring that video feeds are delivered in a way that makes the user experience enjoyable. Some qualities of a good user experience are:
 - Good quality video (you shouldn't be able to count the number of pixels on screen)
