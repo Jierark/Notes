@@ -54,4 +54,29 @@ In a standard trace simulator, the throughput of the network is assumed to be ex
 
 How accurate is trace-driven simulation?
 ![[Pasted image 20251014213605.png]]
-In this case, it looks okay, but there is a noticeable gap in simulation vs ground truth.
+In this case, it looks okay, but there is a noticeable gap in simulation vs ground truth. What happened? The bitrates chosen by the ABR algorithm actually affected the achieved throughput. This could be due to the size of chunks that BBA chooses versus BOLA: a lower initial of chunk size tends to decrease throughput overall.
+
+## Relaxing the Exogenous Trace Assumption
+
+The achieved throughput is modeled by the following equation
+$$m_{t}=f(a_{t},u_{t})$$
+where $a_{t}$ is the bitrate, and $u_{t}$ represents latent network conditions, such as bottleneck capacity. These latent network conditions are unknown to us on a real network and is entirely dependent on the link we just are on. The function $f$ is also unknown to us. If we did know those two variables, then we could easily compute the expected throughput for any given flow. Could we approximate the function given the bitrate we did choose, though?
+
+## A Learning Approach
+Here's our first attempt at solving this problem. 
+![[Pasted image 20251015012356.png]]
+We can feed in the source bitrate $a_{t}$ and the source throughput $m_t$ through this latent factor extractor (inverse of f) and return the latent factors. With our estimate, then feed it into another model that tries to guess what f is to give the source throughput. Yes, this is a confusing approach, but just bear with me.
+
+Unfortunately, this would not work. The functions could both be identity functions where the latent factors are the source throughput estimates.
+
+Instead, we can use the following property about randomized controlled trials:
+The distribution of latent network conditions is the same in trajectories assigned to different algorithms. Equivalently, this can also be expressed as
+- The latent network condition of a given trace is independent of the source algorithm used
+- The latent network condition does not give any information about the source algorithm.
+How can we use this property? 
+
+We can train another model whose goal is to predict a source algorithm given some latent network conditions. The final pipeline looks like this
+![[Pasted image 20251015013919.png]]
+With some specific assumptions, you can show that the RCT property is sufficient for unbiased simulation. It will let you find the true latent variables. Intuitively, you can prove this by relating it to matrix completion. I don't really know how relevant the proof is going to be, as it is quite math heavy.
+
+CausalSim has been used to optimize and deploy real-world ABR algorithms. It was even used to show that BOLA was a strictly better algorithm than BBA.
