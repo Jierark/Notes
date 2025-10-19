@@ -18,5 +18,8 @@ Class: Computation Science and Engineering
 
 [[MIT Class Notes/18.0851/Lecture 9|Lecture 9]] - Time Integrations
 
+[[MIT Class Notes/18.0851/Lecture 10|Lecture 10]] - Least Squares 
+
+[[MIT Class Notes/18.0851/Lecture 11|Lecture 11]] - Least Squares, cont. Graphs & Networks
 
 [[Glossary]] An index cataloging all key terms and concepts

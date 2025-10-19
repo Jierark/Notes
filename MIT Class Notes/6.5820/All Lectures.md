@@ -18,7 +18,7 @@ Class: Computer Networks
 
 [[MIT Class Notes/6.5820/Lecture 9]] - Video Streaming
 
-[[Lecture 10]] - GenAI and LLMs for algorithmic and protocol design
+[[MIT Class Notes/6.5820/Lecture 10]] - GenAI and LLMs for algorithmic and protocol design
 
-[[Lecture 11]] - Simulation
+[[MIT Class Notes/6.5820/Lecture 11]] - Simulation
 #TODO make an index cataloging all key terms and concepts
