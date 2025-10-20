@@ -101,4 +101,25 @@ Put together, we get
 $$A^Tw=A^TCe$$
 $$=A^TC(\vec{b} - A\vec{u}) = \vec{f}$$
 $$A^TCA\vec{u}=\vec{f}-A^TC\vec{b}$$
-Given the current source $f$ and the battery
+Given the current source $f$ and the battery, the goal is to find $u_i$, the voltages at each node. The nullspace has a special meaning in each matrix: #todo watch recording when canvas isn't messed up. We can eliminate this meaning by grounding one of the nodes (setting its voltage to 0).
+
+In this example, set $u_4=0$ and set the conductivities to 1. Then 
+$$K\vec{u}=\begin{bmatrix}
+2 & -1 & -1 & 0 \\
+-1 & 3 & -1 & -1 \\
+-1 & -1 & 3 & -1 \\
+0 & -1 & -1 & 2
+\end{bmatrix}\begin{bmatrix}
+u_{1} \\
+u_{2} \\
+u_{3} \\
+u_{4}
+\end{bmatrix} = \vec{f} - A^T\vec{b}$$
+By setting $u_{4}=0$, we can remove the last column and row of the K matrix, and the associated dimension in the right hand side. The remaining matrix of K is invertible.
+
+Consider $A^Tw$.
+The dimension of the column space of $A^T$ is the same as $A$: 3. The null space of thus of dimension 2. One of these vectors is $\begin{bmatrix}1 \\ -1 \\ 1 \\ 0 \\ 0\end{bmatrix}$. If you assign these currents accordingly, you can see the resulting loop current. The one vector in the null space will correspond to the other possible loop in the bottom.
+
+An additional vector in the null space is the sum of these two vectors, which creates another loop current around the entire electrical network. 
+
+The conclusion then is that the null space corresponds to possible loop currents. However, these are not solutions to the system because the source of energy will reverse a current direction.
