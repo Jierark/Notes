@@ -24,20 +24,20 @@ b_{5}
 \end{bmatrix}$$
 We won't be able to solve this system exactly, so we'll approximate this and use an error term to see how far off we are:
 
-$A\vec{u}$ computes approximate labels, with an error $\vec{e} = A\vec{u} - \vec{b}$, defined as the residual. The goal is to minimize the errors of these approximations: $||A\vec{u} - \vec{b}||^2$, with our choice of $\vec{u}$. This quantity is always positive, so there is a way to minimize this quantity.
+$A\vec{u}$ computes approximate labels, with an error $\vec{e} = A\vec{u} - \vec{b}$, defined as the residual. The goal is to minimize the squared errors of these approximations: $||A\vec{u} - \vec{b}||^2$, with our choice of $\vec{u}$. This quantity is always positive, so there is a way to minimize this quantity. The squared factor is important, too. You'll see why.
 
 Let's examine this closer:
 $$||A\vec{u}-\vec{b}||^2$$
 $$=(A\vec{u}-\vec{b})^T(A\vec{u}-\vec{b})$$
 $$=\vec{u}^TA^TA\vec{u} - \vec{b}^TA\vec{u} - \vec{u}^TA^T\vec{b} + \vec{b}^T\vec{b}$$
 $$=\vec{u}^TA^TA\vec{u} - 2 \vec{u}^TA^T\vec{b} + \vec{b}^T\vec{b}$$
-Note that this quantity $A^TA$ must be a positive definite matrix.
+Note that this matrix $A^TA$ must be a positive definite matrix.
 
-How do we compute $\nabla_{\vec{u}}E=0$? The notion depends on different fields.
+An aside: how do we compute $\nabla_{\vec{u}}E=0$? The notion depends on different fields.
 
 Let's rewrite the equation above in index form:
 $$E = \sum_{i,j} u_{i}(A^TA)_{ij}u_{j} - 2 \sum_{i}u_{i}(A^T\vec{b})_{i} + \sum_{i} b_{i}^2$$
-Now how do we compute $\frac{\delta u_{i}}{\delta u_{k}}$? Let's use the following definition (it will look similar to anyone working with partial derivatives):
+Now, how do we compute $\frac{\delta u_{i}}{\delta u_{k}}$? Let's use the following definition (it will look similar to anyone working with partial derivatives):
 $$\frac{\delta u_{i}}{\delta u_{k}}=\begin{cases}
 1 & \text{if i=k} \\
 0  & \text{otherwise}
@@ -55,7 +55,7 @@ Since $A^TA$ is symmetric, we can reverse the orders of summarizations and combi
 $$=2(A^TA\vec{u})_{k}-2(A^Tb)_{k}=0$$ This is per index k. We can replace them with vectors (and also drop the factor of 2).
 $$2(A^TA\vec{u} - A^T\vec{b})=\vec{0}$$
 The solution is the form
-$$\vec{u}=(A^T)^{-1}A^T\vec{b}$$
+$$\vec{u}=(A^TA)^{-1}A^T\vec{b}$$
 
 Solving for a 3rd degree polynomial is the same method, as long as the matrix $A$ and the vector $\vec{u}$ in the correct terms. For more complex curves, this computation is quite inefficient. Other methods are generally used in these situations (such as gradient descent).
 
@@ -71,8 +71,11 @@ $$A^T\vec{e}=0$$
 $$A^T(A\vec{u}-\vec{b})=0$$
 which arrives back at the same solution as before.
 
+Something interesting to note:
 $\vec{p}$ (the projection of b) = $A\vec{u}_{best}$
-$=A((A^TA)^{-1}A^T\vec{b})$
+$=A(A^TA)^{-1}A^T\vec{b}$
+The matrix $P=A(A^TA)^{-1}A^T$ defines the projection of a vector onto the column space of A.
+
 Suppose the matrix A is invertible. Then this equation can be simplified:
 $$\vec{u}=((A^TA)^{-1}A^T\vec{b})$$
 $$=A^{-1}A^{T^{-1}}A^T\vec{b}$$

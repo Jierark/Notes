@@ -1,7 +1,7 @@
 Last time, we looked at the least squares approximation of a graph of a series of points. There's a few more interesting notes to discuss.
 
 Let's look at the problem setup again.
-#drawing 
+![[Pasted image 20251022174403.png]]
 As usual, we want to minimize the error term, but we're going to introduce the term $\sigma$ which represents variance or uncertainty.
 
 The objective function changes; the goal is to minimize the following expression:
@@ -31,8 +31,8 @@ If $C = I$, then we arrive at our original solution:
 $$u=(A^TA)^{-1}A^T\vec{b}$$The matrix $(A^TA)^{-1}A^T$ is known as the pseudo inverse of $A$, denoted as $A^+$. If A is a square and invertible matrix, then this will reduce back to the inverse.
 
 # Graphs
-#drawing graph
-A graph is a series of edges and nodes. Generally, the edges may be directed, but we are only going to look at directed edges for this lecture. How can we represent this graph as a matrix?
+![[Pasted image 20251022174421.png]]
+A graph is a series of edges and nodes. We are only going to look at directed edges for this lecture. How can we represent this graph as a matrix?
 
 Define the matrix A as the Incidence matrix. Each row represents an edge, and each column represents the corresponding nodes. Each value in the matrix is -1 if the corresponding node is the source of the edge, +1 if it is the destination, and 0 if there are no edges. In this example, the matrix A looks like this:
 $$A=\begin{bmatrix}
@@ -76,7 +76,7 @@ Another way to derive K: $K = D - W$, where D is a matrix which represents the d
 
 # Electrical Networks
 Consider the following electrical network:
-#drawing 
+![[Pasted image 20251022174518.png]]
 
 A is defined in the same way as before.
 Define the following quantities:
