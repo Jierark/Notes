@@ -22,4 +22,9 @@ Class: Computation Science and Engineering
 
 [[MIT Class Notes/18.0851/Lecture 11|Lecture 11]] - Least Squares, cont. Graphs & Networks
 
+[[MIT Class Notes/18.0851/Lecture 12|Lecture 12]] - Electrical Networks & Trusses
+
+[[MIT Class Notes/18.0851/Lecture 13|Lecture 13]] - Trusses
+
+
 [[Glossary]] An index cataloging all key terms and concepts
