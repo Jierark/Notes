@@ -101,8 +101,9 @@ Put together, we get
 $$A^Tw=A^TCe$$
 $$=A^TC(\vec{b} - A\vec{u}) = \vec{f}$$
 $$A^TCA\vec{u}=\vec{f}-A^TC\vec{b}$$
-Given the current source $f$ and the battery, the goal is to find $u_i$, the voltages at each node. The nullspace has a special meaning in each matrix: #todo watch recording when canvas isn't messed up. We can eliminate this meaning by grounding one of the nodes (setting its voltage to 0).
+Given the current source $f$ and the battery, the goal is to find $u_i$, the voltages at each node. The nullspace of $A, A^T$ have a special meaning in this context (see problem set 6).
 
+We can eliminate this meaning by grounding one of the nodes (setting its voltage to 0).
 In this example, set $u_4=0$ and set the conductivities to 1. Then 
 $$K\vec{u}=\begin{bmatrix}
 2 & -1 & -1 & 0 \\

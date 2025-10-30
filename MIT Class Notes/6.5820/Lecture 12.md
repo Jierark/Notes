@@ -19,7 +19,7 @@ On a wired network, sharing occurs in routers and is managed by congestion contr
 This design is easy to mess up.
 
 The name "Cellular" comes from how the network is spaced out.
-#drawing 
+![[Pasted image 20251028234601.png]]
 A "cell" is a section of the spectrum (band) that is assigned to communications. Each cell consists of a Base Station that manages connectivity (In wifi, it's called an access point). The goal is to limit interference between two neighboring cells. The easiest method to avoid interference is to run each cell on different bands such that no 2 neighbors share bands.
 
 How do you allocate bandwidth in a cell? There are multiple possible methods to do this.

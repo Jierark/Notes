@@ -1,7 +1,7 @@
 Positive Definite Matrices came about due to physics. When studying kinetic systems, Energy can't really be a negative quantity, and the matrices used in studying these systems had some interesting properties that could be extended to other fields.
 
 Let's look at this simple spring-mass system:
-#drawing 
+![[Pasted image 20251028234344.png]]
 The internal force acting on this spring comes from Hooke's law:
 $$w=ce$$where e is the elongation or compression of the spring.
 
@@ -20,7 +20,7 @@ Some other equivalent statements of a positive definite matrix are:
 - All the pivots  > 0
 - All the upper-left determinants > 0. By this, we mean that if you take any square matrix in the upper left region and compute its determinant, then it will always be > 0.
 - All the eigenvalues > 0.
-A small note: we are going to talk almost exclusively about symmetric matrices for the rest of this Lecture. This will simplify a few points. 
+A small note: we are going to talk almost exclusively about symmetric matrices for the rest of this Lecture. This will simplify a few points. It's also usually baked into the definition of a positive definite matrix.
 
 Let's look at another example. Suppose I have this matrix and vector:
 $$P = \begin{bmatrix}

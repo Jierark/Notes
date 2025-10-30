@@ -1,5 +1,5 @@
 Consider the following simple electrical network:
-#drawing 
+![[Pasted image 20251028233704.png]]
 The battery has an internal resistance, represented by the value r.
 
 There are two nodes $u_1, u_2$ that we want to measure the potential. Left-multiplied by A, this becomes voltage drops across the edges $e_1, e_2$.
@@ -83,7 +83,7 @@ The second equation reads $-A^TCAu=f - A^TCb$ and we can arrive at the same solu
 
 # Trusses
 Consider the following structure (known as a truss):
-#drawing 
+![[Pasted image 20251028233720.png]]
 We now operate in 2D, so displacements have both a horizontal and vertical component. Each edge represents a bar, while a node represents a pin joint: centers of rotations for the bars it connects.
 
 We fix the structure by defining nodes 4 and 5 to have 0 displacement. There are 5 edges and 3 nodes which can move, and we are interested in measuring displacement of nodes. The number of unknowns is 3 * 2:
@@ -96,11 +96,11 @@ u_{3}^H \\
 u_{3}^V \\
 \end{bmatrix}$$
 How do we measure these displacements? We know that bars can rotate around each joint. This implies a rotation by some angle $\theta$, like this example in node 2:
-#drawing 
+![[Pasted image 20251028233734.png]]
 Suppose the bars are all equal lengths L. Then,
 $$u_{2}^H = L \sin \theta$$
 $$u_{2}^V = -L(1-\cos \theta)$$
-Apply this to all nodes. Then we get
+Convince yourself that this is true based on the trigonometric functions, and apply this to all nodes. Then we get
 $$u=\begin{bmatrix}
 L \sin \theta \\
 -L(1-\cos \theta) \\
@@ -128,12 +128,12 @@ We can apply the same framework from before to solve for our displacements, defi
 How do we construct the matrix A? Firstly, we can deduce that the columns of A will represent the different displacements, and the rows of A will correspond to the elongation of the bars. The dimension of A is then 5x6.
 
 Let's consider this simple example:
-#drawing 
+![[Pasted image 20251028233816.png]]
 The elongation, horizontally, is defined as $$e=u_{2}^H-u_{1}^H$$
 We can ignore the vertical component because it scales quadratically in angle, which we are taking to be small. For a first order approximation, this is fine to ignore. These arguments would be the same for a perfectly vertical bar, just flipped in dimensions.
 
 For an arbitrary angle $\phi$
-#drawing 
+![[Pasted image 20251028233830.png]]
 The elongations are defined as a dot product:
 $$e = (\vec{u_{2}}-\vec{u_{1}})\cdot  \hat{e_{\phi}}$$ where $\hat{e_{\phi}} = \begin{bmatrix}\cos \phi \\ \sin \phi\end{bmatrix}$
 Then the equation $Au=e$ looks like the following for A, u:
