@@ -1,5 +1,5 @@
 Class: Computation Science and Engineering
-# Unit 1
+# Exam 1 Content
 [[MIT Class Notes/18.0851/Lecture 1|Lecture 1]] - introduction to class + logistics
 
 [[MIT Class Notes/18.0851/Lecture 2|Lecture 2]] - Linear Algebra Review
@@ -14,6 +14,7 @@ Class: Computation Science and Engineering
 
 [[MIT Class Notes/18.0851/Lecture 7|Lecture 7]] - Diagonalization
 
+# Exam 2 Content
 [[MIT Class Notes/18.0851/Lecture 8|Lecture 8]] - Positive Definite Matrices
 
 [[MIT Class Notes/18.0851/Lecture 9|Lecture 9]] - Time Integrations
@@ -26,5 +27,13 @@ Class: Computation Science and Engineering
 
 [[MIT Class Notes/18.0851/Lecture 13|Lecture 13]] - Trusses
 
+# Exam 3 Content
+[[MIT Class Notes/18.0851/Lecture 14]] - Weak Finite Elements 
+
+[[MIT Class Notes/18.0851/Lecture 15]] - Finite Elements and Minimum Formulation
+
+[[MIT Class Notes/18.0851/Lecture 16]] - The Poisson Equation
+
+[[MIT Class Notes/18.0851/Lecture 17]] - Fourier Series
 
 [[Glossary]] An index cataloging all key terms and concepts

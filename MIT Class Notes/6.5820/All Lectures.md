@@ -1,5 +1,5 @@
 Class: Computer Networks
-
+## Exam 1
 [[MIT Class Notes/6.5820/Lecture 1|Lecture 1]] - Introduction to the class
 
 [[MIT Class Notes/6.5820/Lecture 2|Lecture 2]] - E2E Congestion Control
@@ -22,9 +22,21 @@ Class: Computer Networks
 
 [[MIT Class Notes/6.5820/Lecture 11| Lecture 11]] - Simulation
 
+## Exam 2
 [[MIT Class Notes/6.5820/Lecture 12|Lecture 12]] - Wireless Networks
 
 [[MIT Class Notes/6.5820/Lecture 13|Lecture 13]] - Mesh Networks & Roofnet
 
+[[MIT Class Notes/6.5820/Lecture 14|Lecture 14]] - Datacenter Networks
+
+[[MIT Class Notes/6.5820/Lecture 15|Lecture 15]] - Falcon
+
+[[MIT Class Notes/6.5820/Lecture 16|Lecture 16]] - DNS & CDNs
+
+[[MIT Class Notes/6.5820/Lecture 17|Lecture 17]] - Chord and Distributed Hash Tables
+
+[[Lecture 18]] - Bitcoin and Blockchains
+
+[[Lecture 19]] - Encore and Active Probing
 
 #TODO make an index cataloging all key terms and concepts

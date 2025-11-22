@@ -19,3 +19,10 @@ The choice of $R_{i}$ determines the fairness factor. Max-min fairness is achiev
 
 # Roofnet
 Roofnet started as a CSAIL Project in the 2000s, with the goal of creating a mesh network at scale. It aimed to achieve operation without central management, while maintaining a wide coverage and acceptable performance. Some of the nodes are placed around MIT campus.
+
+Some of the key design decisions in Roofnet are:
+- Unconstrained node placement.
+- Omni-directional antennas
+- Multi-hop routing - using both link-state and source routing
+- ETT
+- Sample Rate
