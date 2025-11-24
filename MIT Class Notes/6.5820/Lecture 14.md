@@ -1,4 +1,4 @@
-Datacenters are clusters of multiple servers (computers), offering large amounts of computation power for various purposes. Modern scale datacenters are < 10 years old, and they have many uses cases today, such as cloud computing, #TODO.
+Datacenters are clusters of multiple servers (computers), offering large amounts of computation power for various purposes. Modern scale datacenters are < 10 years old, and they have many uses cases today, such as cloud computing.
 
 The network of datacenters is vastly different than that of the Internet. It is on a much smaller scare, occupying a building as opposed to global connectivity. This induces less delay, and control of the network in a datacenter is often singular, so it tends to be more flexible and offer better controls over protocols and distribution of resources. However, the traffic tends to be less predictable. Lastly, datacenters often need to optimize for resource usage as opposed to connectivity.
 

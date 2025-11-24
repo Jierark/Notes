@@ -24,5 +24,5 @@ Some of the key design decisions in Roofnet are:
 - Unconstrained node placement.
 - Omni-directional antennas
 - Multi-hop routing - using both link-state and source routing
-- ETT
-- Sample Rate
+- ETT - a routing metric that optimizes for throughput in a slowly changing network. This comes as an extension from ET.
+- SampleRate - a bit-rate selection method using throughput estimates from actual data delivery.
