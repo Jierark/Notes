@@ -39,4 +39,5 @@ Class: Computer Networks
 
 [[Lecture 19]] - Encore and Active Probing
 
+[[Lecture 20]] - 
 #TODO make an index cataloging all key terms and concepts

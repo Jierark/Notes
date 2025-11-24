@@ -31,9 +31,6 @@ Today, CSMA and TDD are used together in Wi-Fi. CSMA also has multiple variants.
 # Variability and Adaptability
 The intuition for sending packets is that transmissions on the physical layer is similar to sending a complex number.
 
-Consider the complex number $e^{i\theta}=\cos \theta+i\sin \theta$.  The real part is called "in phase", and the imaginary part is the "quadrature". qam-4, or quadrature amplitude modulation, is the simplest method to implement this. This can be extended based on how many encoding of bits you desire.
-
-An alternative to this method is Binary Phase-Shift Keying (bpsk). #TODO define. This can't be infinitely extended due to noise.
-There are many other modulation and coding schemes today.
+Consider the complex number $e^{i\theta}=\cos \theta+i\sin \theta$.  The real part is called "in phase", and the imaginary part is the "quadrature". qam-4, or quadrature amplitude modulation, is the simplest method to implement this. This can be extended based on how many encoding of bits you desire. An alternative to this method is Binary Phase-Shift Keying (bpsk). This can't be infinitely extended due to noise. There are many other modulation and coding schemes today.
 
 To deal with variable channel conditions, use a Bitrate Selection Algorithm. Historically, this used to be auto rate fallback, but the more modern algorithm is sample rate. Since cellular has less interference, the signal to noise ratio is more of a concern, and the algorithms are more controlled. There are even tables which map channel quality to the modulation algorithm used.
