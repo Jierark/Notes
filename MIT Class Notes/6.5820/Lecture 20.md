@@ -1,7 +1,8 @@
 The final lecture!
 
 This paper covers an interesting problem for BGP providers.
-#drawing 
+![[Pasted image 20251124091250.png]]
+ignore the amogus
 More succinctly,
 
 Suppose you are an operator of AS1. AS3 is your provider, and AS2 is your customer. Normal flows look like those in red or green. But what about flows that resemble the one in purple? You can clearly see that it's source is not AS2, even if it claims to be that. How can you mitigate these flows?
@@ -33,4 +34,11 @@ It keeps track of the following quantities:
 	- $P(H_{1}) = (p_{noRTX})^{n_{noRTX}}$
 	- $P(H_{2})=(f_{dup})^{n_{RTX}}$
 	- $P(genuine) = \frac{P(H_{1})}{P(H_{1})+P(H_{2})}$
+When a packet is dropped, it records a snapshot of the observed, duplicate, and retransmitted packets at the time of drop and updates the values above accordingly. When a retransmission is received or expires, it will update the corresponding snapshots.
 
+What if the TCP flows are relatively short? There may not be enough packets dropped to reach a definitive conclusion, so the solution is to aggregate statistics from multiple flows and use the same statistical model.
+
+In cases where flows have abrupt interruptions, the snapshots will simply disregard any pending retransmissions and observe packets for that flow.
+
+# Evaluation
+In a system of all closed-loop traffic, Penny's statistics always work: it will correctly identify flows as closed-loop. In malicious traffic, Penny is correct so long as enough packets are dropped (which turns out to be at least 12). However, it doesn't work well in mixed traffic, but it will test some individual flows if the aggregate looks spoofed. Additionally, the dropping of packets does not have a huge impact on performance, and it does not have huge performance or memory requirements, allowing it to be run in a large range of environments. Penny can be a worthwhile primitive to improve the accuracy of ISPs' measurement and monitoring systems.

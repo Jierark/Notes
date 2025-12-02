@@ -35,9 +35,9 @@ Class: Computer Networks
 
 [[MIT Class Notes/6.5820/Lecture 17|Lecture 17]] - Chord and Distributed Hash Tables
 
-[[Lecture 18]] - Bitcoin and Blockchains
+[[MIT Class Notes/6.5820/Lecture 18]] - Bitcoin and Blockchains
 
-[[Lecture 19]] - Encore and Active Probing
+[[MIT Class Notes/6.5820/Lecture 19]] - Encore and Active Probing
 
-[[Lecture 20]] - 
+[[MIT Class Notes/6.5820/Lecture 20]] - 
 #TODO make an index cataloging all key terms and concepts

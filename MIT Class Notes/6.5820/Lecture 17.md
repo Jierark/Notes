@@ -1,4 +1,4 @@
-#TODO: I don't know how to write an introduction to this
+I don't know how to introduce this. But distributed hash tables are an interesting concept and many people worked on this problem. One of these solutions is Chord.
 
 
 # Mechanics of Chord
@@ -20,15 +20,16 @@ This scheme is much better, and is what Chord uses. It does introduce a question
 
 ## Finding Keys
 How do we find the location of a given key in this distributed setting? The naïve method is a linked list, such as the following:
-#drawing graph
+![[Pasted image 20251124090000.png]]
 This is not optimal, as key lookups will take O(n) time.
 
-To get around this, Chord utilizes a Fingers list. A node with ID n contains the following entries in its list:
+To get around this, Chord utilizes a Fingers list. The general idea is depicted below.
+![[Pasted image 20251124090122.png]]A node with ID n contains the following entries in its list:
 - finger\[0] = successor(n)
-- finger\[i+1] = successor($n+2^i$ mod k( #clarify  i don't remember what the mod term is)), where i = O(m), the number of bits for the keys
+- finger\[i+1] = successor($n+2^i$ mod $2^m$), where i = O(m), the number of bits for the keys
 The idea is that each finger points to an element with distances scaling in O($2^{-i}$). Each one represents an element that is $\frac{1}{2}, \frac{1}{4}, \frac{1}{8},\dots$ -way on the circle of nodes. 
 
-Suppose a node $n$ needs to do a lookup for a node $n'$. The method is to find the finger that is closest to $n'$ without overshooting. This is known as a skip list, and its runtime is O($\log(n)$). #clarify variable notation is very inconsistent :\. The proof basically is that the distance is cut in half at each hop, and on average, half the nodes will get skipped. In practice, the expected hops turns out to be $\frac{1}{2}\log(n)$ due to randomization.
+Suppose a node $n$ needs to do a lookup for a node $n'$. The method is to find the finger that is closest to $n'$ without overshooting. This is known as a skip list, and its runtime is O($\log N$). The proof basically is that the distance is cut in half at each hop, and on average, half the nodes will get skipped. In practice, the expected hops turns out to be $\frac{1}{2}\log(n)$ due to randomization.
 
 ## Churn
 Churn refers to the action of nodes entering and leaving the system. When a node $n$ joins the network, it contacts some node x (which handles all join interactions) and asks it for the successor to n, and it will set its successor to this node.

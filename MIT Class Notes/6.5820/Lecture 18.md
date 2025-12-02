@@ -2,7 +2,7 @@ P2P technology was very popular in the 2000s, but the hype died off after some t
 
 # The Coin
 A coin represents a series of transactions, with each one passing ownership to another user.
-#drawing transaction
+![[Pasted image 20251124090318.png]]
 
 Each user has a public and private key. A transaction between two users A and B consist of the following steps:
 - A wants to transfer a coin they possess to B.
@@ -23,7 +23,7 @@ This is the core of the computation power required for Bitcoin mining. Finding t
 
 There is still a possible vulnerability known as the Private Double Spend Attack.
 # Private Double Spend Attack
-#todo get details
+In summary, this attack occurs when an attacker is able to privately produce a chain that is longer than the currently longest chain. Because of how Bitcoin works, it would accept this chain as truth.
 
 There are a few methods to prevent this attack. Firstly, this is dependent on the computation power of an adversary. If more than 50% of the network is honest, then on average, the honest chain will outpace an adversarial chain with high probability.
 
@@ -31,8 +31,8 @@ Another method is k-deep confirmation. To prevent double spending, a transaction
 
 # Performance
 - Security of Bitcoin depends on computation power of the adversary. So long as adversaries don't control more than 50% of computation, Bitcoin will be secure.
-- The throughput of bitcoin can only handle 3-7 transactions per second, and 1 block is mined per 10 minutes. This rate is mainly due to the computation difficulty of mining a block.
+- The throughput of bitcoin can only handle 3-7 transactions per second, and 1 block is mined per 10 minutes. This rate is mainly due to the computation difficulty of mining a block and has little to deal with of network conditions.
 - The confirmation latency depends on the value of k, but it typically takes hours to complete.
 - A lower threshold does speed up the rate of mining, but it will also weaken the security guarantee.
-- Forking
+- Forking also limits the speed of mining blocks. A new change to the honest chain needs to be broadcast to the entire network so users can mine blocks on the correct chain. An adversary can focus more of its computation on producing a longer chain than the honest users since there isn't a guarantee that all honest users are working on the same chain.
 
