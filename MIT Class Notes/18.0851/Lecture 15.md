@@ -27,7 +27,7 @@ $$\frac{du}{dx} = \sum_{i=0}^4 U_{i}\phi'_{i}(x)$$
 $$\frac{dv}{dx} = \phi'_{j}(x)$$
 $$v=\phi_{j}(x)$$
 $$\int_{0}^1 \sum_{i=0}^4 U_{i}\phi'_{i}(x)\phi'_{j}(x)dx = \int_{0}^1f\phi_{j}dx$$
-We can simplify this a little bit by moving the summation outside (also using f =1)
+We can simplify this a little bit by moving the summation outside. For simplicity, let's assume f=1.
 $$ \sum_{i=0}^4 \int_{0}^1U_{i}\phi'_{i}(x)\phi'_{j}(x)dx = \int_{0}^1\phi_{j}dx$$
 Note that this is now a system of these equations, defined over all values of $j$. We can equivalently express these as the matrix equation
 $$KU=F$$

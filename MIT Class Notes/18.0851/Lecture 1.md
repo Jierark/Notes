@@ -1,5 +1,5 @@
 Reference book: Computational Science and Engineering, Gilbert Strang (2007), 2nd edition.
-Is available on libgen btw (some mirrors won't have it)
+
 
 # A Special Matrix K
 Consider the following system. You have 3 masses, all connected by springs from floor to ceiling. 

@@ -10,7 +10,7 @@ Consider the following diagram:
 ![[Pasted image 20251106145820.png]]This is a rough sketch of a stove plate. The center contains an electric heating element, which has some power $P = f(x,y)$ that is converted to heat. $T_0$ represents the ambient temperature in the environment. We are interested in how the temperature will be spread across the plate at equilibrium: $T = u(x,y) - T_{0}$.
 
 As always, we apply the common framework that is oh so familiar to this class.
-- Start with $u(x,y)$ #clarify what does this represent?
+- Start with $u(x,y)$ 
 - The matrix A will be a gradient operator, so $A\vec{u} = \nabla \vec{u} = \begin{bmatrix} \frac{\delta u}{\delta x} \\ \frac{\delta u}{\delta y} \end{bmatrix}$
 - $\vec{e}(x,y)$ represents the temperature gradient between different points.
 - $\vec{w}(x,y) = c(x,y)\vec{e}(x,y)$ represents heat fluxes, with $c(x,y)$ representing thermal conductivity.

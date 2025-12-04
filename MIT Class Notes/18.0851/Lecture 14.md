@@ -64,7 +64,7 @@ The weak form finally is
 $$\int_{0}^1c(x) \frac{du(x)}{dx} \frac{dv(x)}{dx} dx = \int_{0}^1f(x)v(x)dx$$
 Where v is differentiable such that $v(1)=0$.
 
-An example of this is the Galerkian or Rayleigh-Ritz construction.
+An example of this is the Galerkin or Rayleigh-Ritz construction.
 
 Consider the following function $\phi(x)$, which is a piecewise linear function. It linearly increases up to $(x_{j},1)$ then linearly decreases to 0 at the next x point.
 

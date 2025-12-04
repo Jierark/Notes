@@ -28,12 +28,20 @@ Class: Computation Science and Engineering
 [[MIT Class Notes/18.0851/Lecture 13|Lecture 13]] - Trusses
 
 # Exam 3 Content
-[[MIT Class Notes/18.0851/Lecture 14]] - Weak Finite Elements 
+[[MIT Class Notes/18.0851/Lecture 14 |Lecture 14]] - Weak Finite Elements 
 
-[[MIT Class Notes/18.0851/Lecture 15]] - Finite Elements and Minimum Formulation
+[[MIT Class Notes/18.0851/Lecture 15 |Lecture 15]] - Finite Elements and Minimum Formulation
 
-[[MIT Class Notes/18.0851/Lecture 16]] - The Poisson Equation
+[[MIT Class Notes/18.0851/Lecture 16 |Lecture 16]] - The Poisson Equation
 
-[[MIT Class Notes/18.0851/Lecture 17]] - Fourier Series
+[[MIT Class Notes/18.0851/Lecture 17|Lecture 17]] - Fourier Series
+
+[[MIT Class Notes/18.0851/Lecture 18|Lecture 18]] - Fast Poisson Solver
+
+[[MIT Class Notes/18.0851/Lecture 19|Lecture 19]] - Discrete Fourier Transform
+
+[[MIT Class Notes/18.0851/Lecture 20|Lecture 20]] - Fourier Series and Convolutions
+
+[[Lecture 21]] - Finite Elements in 2 Dimensions
 
 [[Glossary]] An index cataloging all key terms and concepts

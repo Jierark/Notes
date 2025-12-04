@@ -64,8 +64,13 @@ Then $SW(x) = \frac{4}{\pi}\left( \frac{1}{1}\sin x + \frac{1}{3}\sin 3x + \frac
 
 Another example: Suppose we have the following graph:
 ![[Pasted image 20251118160322.png]]
-This is a train of delta functions. #TODO finish this
+This is a train of delta functions. This is also even: $f(-2\pi) = f(2\pi)$. Then, we only need to concern ourselves with the cosine terms:
 
+$$c(x) = \frac{a_{0}}{2} + \sum_{k=1}^{\infty}a_{n}\cos(nx)$$
+$$a_{k} = \frac{1}{\pi}\int_{-\pi}^\pi \cos (kx) \delta(x)dx$$
+$$a_{k} = \frac{1}{\pi}$$
+(delta function integrates to 1 over this bound)
+$$c(x) = \frac{1}{2\pi} + \frac{1}{\pi}(\cos x + \cos 2x + \cos 3x + \dots)$$
 # Parseval's Theorem
 Suppose you have the eigendecomposition of $K = V \Lambda V^T$ and some vector $\vec{a}$. Recall that the product $K\vec{a}$ can be thought of as three operations using the eigendecomposition.
 
